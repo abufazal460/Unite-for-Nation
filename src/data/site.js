@@ -1,8 +1,9 @@
+import logo from "../assets/logo/logo.jpeg"
 export const site = {
   name: "Unit of Nation",
   fullName: "Unit of Nation Human Rights Foundation",
   tagline: "Defending Innocents & Restoring Human Rights",
-  logoUrl: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=200",
+  logoUrl: logo,
   whatsappNumber: "919876543210", // International WhatsApp format without plus
   whatsappMessage: "Hello%20Unit%20of%20Nation,%20I%20need%20urgent%20legal%20guidance%20regarding%20a%20false%20case.",
   whatsappUrl: "https://wa.me/919876543210?text=Hello%20Unit%20of%20Nation,%20I%20need%20legal%20guidance.",
