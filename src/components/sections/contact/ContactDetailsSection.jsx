@@ -23,7 +23,7 @@ export function ContactDetailsSection() {
     {
       id: "facebook",
       name: "Facebook Page",
-      handle: "@UnitOfNationOrg",
+      handle: "@UniteOfNationOrg",
       icon: FaFacebook,
       color: "text-blue-600 bg-blue-50 border-blue-200 hover:bg-blue-100",
       btnColor: "bg-blue-600 hover:bg-blue-700 text-white",
@@ -32,7 +32,7 @@ export function ContactDetailsSection() {
     {
       id: "instagram",
       name: "Instagram",
-      handle: "@unitofnation_ngo",
+      handle: "@Uniteofnation_ngo",
       icon: FaInstagram,
       color: "text-pink-600 bg-pink-50 border-pink-200 hover:bg-pink-100",
       btnColor: "bg-pink-600 hover:bg-pink-700 text-white",
@@ -41,7 +41,7 @@ export function ContactDetailsSection() {
     {
       id: "twitter",
       name: "Twitter / X",
-      handle: "@UnitOfNation",
+      handle: "@UniteOfNation",
       icon: FaXTwitter,
       color: "text-slate-900 bg-slate-100 border-slate-300 hover:bg-slate-200",
       btnColor: "bg-slate-900 hover:bg-slate-800 text-white",
@@ -50,7 +50,7 @@ export function ContactDetailsSection() {
     {
       id: "youtube",
       name: "YouTube Channel",
-      handle: "Unit of Nation Official",
+      handle: "Unite of Nation Official",
       icon: FaYoutube,
       color: "text-red-600 bg-red-50 border-red-200 hover:bg-red-100",
       btnColor: "bg-red-600 hover:bg-red-700 text-white",
@@ -59,7 +59,7 @@ export function ContactDetailsSection() {
     {
       id: "linkedin",
       name: "LinkedIn",
-      handle: "Unit of Nation Foundation",
+      handle: "Unite of Nation Foundation",
       icon: FaLinkedin,
       color: "text-sky-700 bg-sky-50 border-sky-200 hover:bg-sky-100",
       btnColor: "bg-sky-700 hover:bg-sky-800 text-white",
@@ -148,7 +148,7 @@ export function ContactDetailsSection() {
               Follow & Reach Us On Social Media
             </h3>
             <p className="text-sm sm:text-base text-slate-600">
-              Click any platform below to connect with Unit of Nation on official channels.
+              Click any platform below to connect with Unite of Nation on official channels.
             </p>
           </div>
 

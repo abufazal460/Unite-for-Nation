@@ -42,7 +42,7 @@ export function Navbar({ currentPath = "/" }) {
         <a href="/" className="flex items-center gap-3.5 group">
           <img
             src={site.logoUrl}
-            alt="Unit of Nation Logo"
+            alt="Unite of Nation Logo"
             className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl object-cover border border-slate-200 shadow-xs group-hover:scale-105 transition-transform"
             referrerPolicy="no-referrer"
           />

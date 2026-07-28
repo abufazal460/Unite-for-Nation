@@ -45,7 +45,7 @@ export function WhoWeAreSection() {
             <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-white aspect-[4/3]">
               <img
                 src={about.introImage}
-                alt="Unit of Nation Foundation"
+                alt="Unite of Nation Foundation"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />

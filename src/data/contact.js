@@ -1,5 +1,5 @@
 export const contact = {
-  title: "Reach Unit of Nation",
+  title: "Reach Unite of Nation",
   subtitle: "WE ARE HERE TO LISTEN & PROTECT YOUR RIGHTS",
   description: "If you or your loved one is facing false criminal allegations, harassment, or unjust legal prosecution, reach out immediately to our confidential assistance desk.",
   phoneNumbers: [
@@ -7,11 +7,11 @@ export const contact = {
     { id: "p2", label: "Legal Panel Secretariat", number: "+91 11 2345 6789", rawNumber: "+911123456789" }
   ],
   emails: [
-    { id: "e1", label: "Emergency Legal Help", address: "help@unitofnation.org" },
-    { id: "e2", label: "Media & Case Verification", address: "info@unitofnation.org" }
+    { id: "e1", label: "Emergency Legal Help", address: "help@Uniteofnation.org" },
+    { id: "e2", label: "Media & Case Verification", address: "info@Uniteofnation.org" }
   ],
   officeAddress: {
-    building: "Unit of Nation Human Rights Trust Building",
+    building: "Unite of Nation Human Rights Trust Building",
     street: "Plot No. 42, Lawyers Enclave, Sector 12",
     city: "New Delhi",
     state: "Delhi",

@@ -25,7 +25,7 @@ export const gallery = [
     category: "certificates",
     year: "2023",
     location: "National Convention Center",
-    description: "Unit of Nation receiving official certificate of appreciation for human rights advocacy.",
+    description: "Unite of Nation receiving official certificate of appreciation for human rights advocacy.",
     image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800",
     featured: true
   },
@@ -44,7 +44,7 @@ export const gallery = [
     title: "Family Counseling & Rehabilitation Session",
     category: "victims-support",
     year: "2024",
-    location: "Unit of Nation Help Center",
+    location: "Unite of Nation Help Center",
     description: "Psychological support and social dignity rebuilding for families of acquittees.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800",
     featured: true

@@ -23,7 +23,7 @@ export function Footer() {
             <div className="flex items-center gap-3.5">
               <img
                 src={site.logoUrl}
-                alt="Unit of Nation Logo"
+                alt="Unite of Nation Logo"
                 className="w-10 h-10 rounded-xl object-cover border border-slate-200 shadow-xs"
                 referrerPolicy="no-referrer"
               />
