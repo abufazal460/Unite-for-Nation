@@ -17,7 +17,7 @@ export function SectionTitle({
         </span>
       )}
       {title && (
-        <h2 className="text-2xl sm:text-4xl md:text-5xl font-heading font-extrabold tracking-tight text-slate-900">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-body font-extrabold tracking-tight text-slate-900">
           {title}
         </h2>
       )}

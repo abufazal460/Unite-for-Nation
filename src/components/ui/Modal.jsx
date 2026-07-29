@@ -29,7 +29,7 @@ export function Modal({ isOpen, onClose, title, children }) {
       <div className="relative z-10 w-full max-w-3xl bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden max-h-[90vh] flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-100 shrink-0 bg-slate-50">
-          <h3 className="text-base font-heading font-bold text-slate-900 truncate">{title || 'Details'}</h3>
+          <h3 className="text-base font-body font-extrabold text-slate-900 truncate">{title || 'Details'}</h3>
           <button
             onClick={onClose}
             className="w-8 h-8 rounded-full bg-slate-200/80 hover:bg-slate-300 text-slate-700 flex items-center justify-center transition-all cursor-pointer"
