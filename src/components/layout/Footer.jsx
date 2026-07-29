@@ -52,7 +52,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-slate-100 text-slate-700 border-t border-slate-200/80 pt-14 pb-10 text-sm font-body">
+    <footer className="bg-slate-100 text-slate-700 border-t border-slate-200/80 pt-14  text-sm font-body">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
           {/* Brand */}
@@ -153,7 +153,7 @@ export function Footer() {
           <p className="text-xs sm:text-sm font-mono text-slate-500 font-medium">
             {footer.copyright}
           </p>
-          <p className="text-xs sm:text-sm font-body border-t  border-slate-200 text-slate-500 font-light">
+          <p className="text-xs sm:text-sm font-body border-t pb-2 pt-2 border-slate-200 text-slate-500 font-light">
             {footer.developer.title}{" "}
             <a
               href={footer.developer.url}
