@@ -1,17 +1,54 @@
-import React from 'react';
-import { footer } from '../../data/footer';
-import { site } from '../../data/site';
-import { FaWhatsapp, FaFacebook, FaInstagram, FaXTwitter, FaYoutube, FaLinkedin } from 'react-icons/fa6';
-import { FiMail, FiMapPin } from 'react-icons/fi';
+import React from "react";
+import { footer } from "../../data/footer";
+import { site } from "../../data/site";
+import {
+  FaWhatsapp,
+  FaFacebook,
+  FaInstagram,
+  FaXTwitter,
+  FaYoutube,
+  FaLinkedin,
+} from "react-icons/fa6";
+import { FiMail, FiMapPin } from "react-icons/fi";
 
 export function Footer() {
   const socialIcons = [
-    { name: "WhatsApp", icon: FaWhatsapp, url: site.whatsappUrl, color: "hover:text-emerald-600 hover:bg-emerald-50" },
-    { name: "Facebook", icon: FaFacebook, url: "https://facebook.com", color: "hover:text-blue-600 hover:bg-blue-50" },
-    { name: "Instagram", icon: FaInstagram, url: "https://instagram.com", color: "hover:text-pink-600 hover:bg-pink-50" },
-    { name: "Twitter / X", icon: FaXTwitter, url: "https://twitter.com", color: "hover:text-slate-900 hover:bg-slate-200" },
-    { name: "YouTube", icon: FaYoutube, url: "https://youtube.com", color: "hover:text-red-600 hover:bg-red-50" },
-    { name: "LinkedIn", icon: FaLinkedin, url: "https://linkedin.com", color: "hover:text-sky-700 hover:bg-sky-50" }
+    {
+      name: "WhatsApp",
+      icon: FaWhatsapp,
+      url: site.whatsappUrl,
+      color: "hover:text-emerald-600 hover:bg-emerald-50",
+    },
+    {
+      name: "Facebook",
+      icon: FaFacebook,
+      url: "https://www.facebook.com/share/1Md2dFpnck/",
+      color: "hover:text-blue-600 hover:bg-blue-50",
+    },
+    {
+      name: "Instagram",
+      icon: FaInstagram,
+      url: "https://instagram.com",
+      color: "hover:text-pink-600 hover:bg-pink-50",
+    },
+    {
+      name: "Twitter / X",
+      icon: FaXTwitter,
+      url: "https://twitter.com",
+      color: "hover:text-slate-900 hover:bg-slate-200",
+    },
+    {
+      name: "YouTube",
+      icon: FaYoutube,
+      url: "https://youtube.com",
+      color: "hover:text-red-600 hover:bg-red-50",
+    },
+    {
+      name: "LinkedIn",
+      icon: FaLinkedin,
+      url: "https://linkedin.com",
+      color: "hover:text-sky-700 hover:bg-sky-50",
+    },
   ];
 
   return (
@@ -24,12 +61,16 @@ export function Footer() {
               <img
                 src={site.logoUrl}
                 alt="Unite of Nation Logo"
-                className="w-10 h-10 rounded-xl object-cover border border-slate-200 shadow-xs"
+                className="w-14 h-14 rounded-lg border border-slate-200 shadow-xs"
                 referrerPolicy="no-referrer"
               />
               <div>
-                <h3 className="text-lg sm:text-xl font-heading font-bold text-slate-900">{site.name}</h3>
-                <p className="text-xs text-red-700 font-mono font-bold uppercase tracking-wider">Human Rights Foundation</p>
+                <h3 className="text-lg sm:text-xl font-heading font-bold text-slate-900">
+                  {site.name}
+                </h3>
+                <p className="text-xs text-red-700 font-mono font-bold uppercase tracking-wider">
+                  Human Rights Foundation
+                </p>
               </div>
             </div>
             <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
@@ -58,11 +99,16 @@ export function Footer() {
 
           {/* Quick Links (4 pages) */}
           <div className="space-y-4">
-            <h4 className="text-sm font-heading font-bold text-slate-900 uppercase tracking-wider font-mono">Quick Navigation</h4>
+            <h4 className="text-sm font-heading font-bold text-slate-900 uppercase tracking-wider font-mono">
+              Quick Navigation
+            </h4>
             <ul className="space-y-2.5 text-base">
               {footer.quickLinks.map((link, idx) => (
                 <li key={idx}>
-                  <a href={link.href} className="text-slate-700 hover:text-red-700 font-medium transition-colors">
+                  <a
+                    href={link.href}
+                    className="text-slate-700 hover:text-red-700 font-medium transition-colors"
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -72,10 +118,13 @@ export function Footer() {
 
           {/* Contact & Secretariat */}
           <div className="space-y-4">
-            <h4 className="text-sm font-heading font-bold text-slate-900 uppercase tracking-wider font-mono">Secretariat Desk</h4>
+            <h4 className="text-sm font-heading font-bold text-slate-900 uppercase tracking-wider font-mono">
+              Secretariat Desk
+            </h4>
             <div className="space-y-3 text-sm sm:text-base text-slate-700">
               <a
                 href={site.whatsappUrl}
+                target="__blank"
                 className="flex items-center gap-2.5 text-emerald-700 font-bold hover:underline"
               >
                 <FaWhatsapp className="w-5 h-5 text-emerald-600 shrink-0" />
@@ -103,6 +152,17 @@ export function Footer() {
           </p>
           <p className="text-xs sm:text-sm font-mono text-slate-500 font-medium">
             {footer.copyright}
+          </p>
+          <p className="text-xs sm:text-sm font-body border-t  border-slate-200 text-slate-500 font-light">
+            {footer.developer.title}{" "}
+            <a
+              href={footer.developer.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline transition-all duration-300"
+            >
+              {footer.developer.name}
+            </a>
           </p>
         </div>
       </div>

@@ -3,7 +3,7 @@ export const contact = {
   subtitle: "WE ARE HERE TO LISTEN & PROTECT YOUR RIGHTS",
   description: "If you or your loved one is facing false criminal allegations, harassment, or unjust legal prosecution, reach out immediately to our confidential assistance desk.",
   phoneNumbers: [
-    { id: "p1", label: "Helpline (Toll-Free / 24/7)", number: "+91 98765 43210", rawNumber: "+919876543210" },
+    { id: "p1", label: "Helpline (Toll-Free / 24/7)", number: "+91 9621555551", rawNumber: "+91 9621555551" },
     { id: "p2", label: "Legal Panel Secretariat", number: "+91 11 2345 6789", rawNumber: "+911123456789" }
   ],
   emails: [

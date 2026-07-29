@@ -22,8 +22,8 @@ export function Button({
   const handleWhatsAppClick = (e) => {
     if (variant === "whatsapp") {
       e.preventDefault();
-      // Redirect directly in the same tab as requested
-      window.location.href = site.whatsappUrl;
+      // Open WhatsApp in a new tab
+      window.open(site.whatsappUrl, "_blank", "noopener,noreferrer");
       return;
     }
     if (onClick) onClick(e);
@@ -61,7 +61,7 @@ export function Button({
 
   if (variant === "whatsapp") {
     return (
-      <button type="button" onClick={handleWhatsAppClick} className={combinedClass}>
+      <button type="button"  onClick={handleWhatsAppClick} className={combinedClass}>
         {renderInner()}
       </button>
     );

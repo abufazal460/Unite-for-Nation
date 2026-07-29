@@ -14,7 +14,7 @@ export function ContactDetailsSection() {
     {
       id: "whatsapp",
       name: "WhatsApp Support",
-      handle: "+91 98765 43210",
+      handle: "+91 9621555551",
       icon: FaWhatsapp,
       color: "text-emerald-600 bg-emerald-50 border-emerald-200 hover:bg-emerald-100",
       btnColor: "bg-emerald-600 hover:bg-emerald-700 text-white",
@@ -27,7 +27,7 @@ export function ContactDetailsSection() {
       icon: FaFacebook,
       color: "text-blue-600 bg-blue-50 border-blue-200 hover:bg-blue-100",
       btnColor: "bg-blue-600 hover:bg-blue-700 text-white",
-      url: "https://facebook.com"
+      url: "https://www.facebook.com/share/1Md2dFpnck/"
     },
     {
       id: "instagram",

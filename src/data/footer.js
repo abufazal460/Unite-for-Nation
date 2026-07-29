@@ -7,5 +7,10 @@ export const footer = {
     { label: "Contact Us", href: "/contact" }
   ],
   legalDisclaimer: "Information on this portal is for legal literacy purposes and does not replace formal legal counsel until registered at our Secretariat.",
-  copyright: "© 2026 Unite of Nation Human Rights Foundation. All Rights Reserved."
+  copyright: "© 2026 Unite of Nation Human Rights Foundation. All Rights Reserved.",
+  developer: {
+    title: "Designed & Developed by Jamia Academy Student",
+    name: "Abu Fazal",
+    url: "https://abufazal.netlify.app/" 
+  }
 };
