@@ -25,30 +25,25 @@ export function Footer() {
       url: "https://www.facebook.com/share/1Md2dFpnck/",
       color: "hover:text-blue-600 hover:bg-blue-50",
     },
-    {
-      name: "Instagram",
-      icon: FaInstagram,
-      url: "https://instagram.com",
-      color: "hover:text-pink-600 hover:bg-pink-50",
-    },
-    {
-      name: "Twitter / X",
-      icon: FaXTwitter,
-      url: "https://twitter.com",
-      color: "hover:text-slate-900 hover:bg-slate-200",
-    },
-    {
-      name: "YouTube",
-      icon: FaYoutube,
-      url: "https://youtube.com",
-      color: "hover:text-red-600 hover:bg-red-50",
-    },
-    {
-      name: "LinkedIn",
-      icon: FaLinkedin,
-      url: "https://linkedin.com",
-      color: "hover:text-sky-700 hover:bg-sky-50",
-    },
+    // {
+    //   name: "Instagram",
+    //   icon: FaInstagram,
+    //   url: "https://instagram.com",
+    //   color: "hover:text-pink-600 hover:bg-pink-50",
+    // },
+    // {
+    //   name: "Twitter / X",
+    //   icon: FaXTwitter,
+    //   url: "https://twitter.com",
+    //   color: "hover:text-slate-900 hover:bg-slate-200",
+    // },
+    // {
+    //   name: "YouTube",
+    //   icon: FaYoutube,
+    //   url: "https://youtube.com",
+    //   color: "hover:text-red-600 hover:bg-red-50",
+    // },
+    
   ];
 
   return (

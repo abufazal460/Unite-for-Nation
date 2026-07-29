@@ -10,7 +10,7 @@ export function MapSection() {
         <SectionTitle
           subtitle="LOCATION MAP"
           title="Secretariat Location"
-          description="Visit our office in Civil Lines, New Delhi for in-person document submission and legal consultations."
+          description="Visit our office in Batla House, New Delhi for in-person document submission and legal consultations."
         />
 
         <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-100 h-[380px] sm:h-[480px] w-full">

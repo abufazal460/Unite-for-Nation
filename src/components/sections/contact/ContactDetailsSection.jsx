@@ -23,48 +23,40 @@ export function ContactDetailsSection() {
     {
       id: "facebook",
       name: "Facebook Page",
-      handle: "@UniteOfNationOrg",
+      handle: "@UniteOfNation",
       icon: FaFacebook,
       color: "text-blue-600 bg-blue-50 border-blue-200 hover:bg-blue-100",
       btnColor: "bg-blue-600 hover:bg-blue-700 text-white",
       url: "https://www.facebook.com/share/1Md2dFpnck/"
     },
-    {
-      id: "instagram",
-      name: "Instagram",
-      handle: "@Uniteofnation_ngo",
-      icon: FaInstagram,
-      color: "text-pink-600 bg-pink-50 border-pink-200 hover:bg-pink-100",
-      btnColor: "bg-pink-600 hover:bg-pink-700 text-white",
-      url: "https://instagram.com"
-    },
-    {
-      id: "twitter",
-      name: "Twitter / X",
-      handle: "@UniteOfNation",
-      icon: FaXTwitter,
-      color: "text-slate-900 bg-slate-100 border-slate-300 hover:bg-slate-200",
-      btnColor: "bg-slate-900 hover:bg-slate-800 text-white",
-      url: "https://twitter.com"
-    },
-    {
-      id: "youtube",
-      name: "YouTube Channel",
-      handle: "Unite of Nation Official",
-      icon: FaYoutube,
-      color: "text-red-600 bg-red-50 border-red-200 hover:bg-red-100",
-      btnColor: "bg-red-600 hover:bg-red-700 text-white",
-      url: "https://youtube.com"
-    },
-    {
-      id: "linkedin",
-      name: "LinkedIn",
-      handle: "Unite of Nation Foundation",
-      icon: FaLinkedin,
-      color: "text-sky-700 bg-sky-50 border-sky-200 hover:bg-sky-100",
-      btnColor: "bg-sky-700 hover:bg-sky-800 text-white",
-      url: "https://linkedin.com"
-    }
+    // {
+    //   id: "instagram",
+    //   name: "Instagram",
+    //   handle: "@Uniteofnation_ngo",
+    //   icon: FaInstagram,
+    //   color: "text-pink-600 bg-pink-50 border-pink-200 hover:bg-pink-100",
+    //   btnColor: "bg-pink-600 hover:bg-pink-700 text-white",
+    //   url: "https://instagram.com"
+    // },
+    // {
+    //   id: "twitter",
+    //   name: "Twitter / X",
+    //   handle: "@UniteOfNation",
+    //   icon: FaXTwitter,
+    //   color: "text-slate-900 bg-slate-100 border-slate-300 hover:bg-slate-200",
+    //   btnColor: "bg-slate-900 hover:bg-slate-800 text-white",
+    //   url: "https://twitter.com"
+    // },
+    // {
+    //   id: "youtube",
+    //   name: "YouTube Channel",
+    //   handle: "Unite of Nation Official",
+    //   icon: FaYoutube,
+    //   color: "text-red-600 bg-red-50 border-red-200 hover:bg-red-100",
+    //   btnColor: "bg-red-600 hover:bg-red-700 text-white",
+    //   url: "https://youtube.com"
+    // },
+   
   ];
 
   return (
@@ -135,7 +127,7 @@ export function ContactDetailsSection() {
             </p>
             <div className="pt-2 flex items-center gap-2 text-xs font-mono text-slate-600 bg-slate-100 p-2.5 rounded-lg border border-slate-200">
               <FiClock className="w-4 h-4 text-slate-500 shrink-0" />
-              <span>Mon - Sat: 10:00 AM - 6:00 PM</span>
+              <span>All day: 10:00 AM - 8:00 PM</span>
             </div>
           </Card>
         </div>
