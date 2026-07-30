@@ -1,7 +1,7 @@
 export const statistics = [
   {
     id: "stat-1",
-    targetNumber: 3450,
+    targetNumber: 200,
     suffix: "+",
     title: "Innocent Victims Assisted",
     description: "Innocent individuals guided through legal procedures and bail representation.",
@@ -9,7 +9,7 @@ export const statistics = [
   },
   {
     id: "stat-2",
-    targetNumber: 850,
+    targetNumber: 100,
     suffix: "+",
     title: "FIR Quashed & Acquittals",
     description: "Fabricated criminal cases successfully quashed in trial and High Courts.",
@@ -17,7 +17,7 @@ export const statistics = [
   },
   {
     id: "stat-3",
-    targetNumber: 120,
+    targetNumber: 1000,
     suffix: "+",
     title: "Legal Awareness Camps",
     description: "Public seminars and legal literacy workshops organized across regions.",
@@ -25,7 +25,7 @@ export const statistics = [
   },
   {
     id: "stat-4",
-    targetNumber: 45,
+    targetNumber: 1000,
     suffix: "+",
     title: "Pro-Bono Advocate Partners",
     description: "Dedicated panel lawyers standing up against fabricated litigation.",
