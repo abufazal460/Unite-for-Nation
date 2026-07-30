@@ -23,7 +23,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-base sm:text-xl md:text-2xl text-slate-700 leading-relaxed font-body max-w-2xl mx-auto lg:mx-0">
-              Unite of Nation is a public charitable trust offering free legal literacy, case evaluation, and advocacy to support victims falsely implicated in criminal charges.
+              Unite For Nation is a public charitable trust offering free legal literacy, case evaluation, and advocacy to support victims falsely implicated in criminal charges.
             </p>
 
             {/* Action Button: Centered WhatsApp Button */}
@@ -59,13 +59,13 @@ export function HeroSection() {
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-lg bg-white">
               <img
                 src={hero.image}
-                alt="Unite of Nation Legal Pillars"
+                alt="Unite For Nation Legal Pillars"
                 className="w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] object-cover object-center"
                 referrerPolicy="no-referrer"
               />
               <div className="p-5 bg-white border-t border-slate-100 flex items-center justify-between">
                 <div>
-                  <h4 className="text-base sm:text-lg font-heading font-bold text-slate-900">Unite of Nation Trust</h4>
+                  <h4 className="text-base sm:text-lg font-heading font-bold text-slate-900">Unite For Nation Trust</h4>
                   <p className="text-xs sm:text-sm text-slate-600">Restoring dignity with legal truth</p>
                 </div>
                 <Badge variant="red" size="md">

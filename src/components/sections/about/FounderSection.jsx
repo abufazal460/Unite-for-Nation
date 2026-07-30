@@ -28,7 +28,7 @@ export function FounderSection() {
                   <h4 className="text-sm font-heading font-bold text-slate-900">{founder.name}</h4>
                   <span className="text-xs text-red-700 font-mono">{founder.role}</span>
                 </div>
-                <Badge variant="amber">Legal Advocate</Badge>
+                <Badge variant="amber">Founder</Badge>
               </div>
             </div>
           </div>
@@ -44,15 +44,6 @@ export function FounderSection() {
                 "{founder.quote}"
               </p>
               <span className="block text-right text-xs sm:text-sm font-mono text-amber-900 font-bold">— {founder.name}</span>
-            </div>
-
-            <div className="space-y-2 pt-1">
-              {founder.achievements.slice(0, 3).map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3 text-sm sm:text-base text-slate-800 p-3 bg-slate-50 rounded-xl border border-slate-200 font-medium">
-                  <FiCheck className="w-5 h-5 text-emerald-600 shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
             </div>
           </div>
         </div>

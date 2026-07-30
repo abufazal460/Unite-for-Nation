@@ -50,7 +50,7 @@ export function ContactDetailsSection() {
     // {
     //   id: "youtube",
     //   name: "YouTube Channel",
-    //   handle: "Unite of Nation Official",
+    //   handle: "Unite For Nation Official",
     //   icon: FaYoutube,
     //   color: "text-red-600 bg-red-50 border-red-200 hover:bg-red-100",
     //   btnColor: "bg-red-600 hover:bg-red-700 text-white",
@@ -140,7 +140,7 @@ export function ContactDetailsSection() {
               Follow & Reach Us On Social Media
             </h3>
             <p className="text-sm sm:text-base text-slate-600">
-              Click any platform below to connect with Unite of Nation on official channels.
+              Click any platform below to connect with Unite For Nation on official channels.
             </p>
           </div>
 

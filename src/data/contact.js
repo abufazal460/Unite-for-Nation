@@ -1,5 +1,5 @@
 export const contact = {
-  title: "Reach Unite of Nation",
+  title: "Reach Unite For Nation",
   subtitle: "WE ARE HERE TO LISTEN & PROTECT YOUR RIGHTS",
   description: "If you or your loved one is facing false criminal allegations, harassment, or unjust legal prosecution, reach out immediately to our confidential assistance desk.",
   phoneNumbers: [
@@ -11,7 +11,7 @@ export const contact = {
     { id: "e2", label: "Media & Case Verification", address: "info@Uniteofnation.org" }
   ],
   officeAddress: {
-    building: "Unite of Nation Human Rights Trust Building",
+    building: "Unite For Nation Human Rights Trust Building",
     street: "A-29 Batla House Chowk Jamia Nagar Okhla",  
     city: "New Delhi",
     state: "Delhi",

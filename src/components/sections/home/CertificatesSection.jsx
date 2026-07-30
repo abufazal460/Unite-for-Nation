@@ -16,7 +16,7 @@ export function CertificatesSection() {
         <SectionTitle
           subtitle="GOVERNMENT & LEGAL COMPLIANCE"
           title="Official Registrations & Certificates"
-          description="Unite of Nation operates with complete transparency, institutional compliance, and government verification as a registered public trust."
+          description="Unite For Nation operates with complete transparency, institutional compliance, and government verification as a registered public trust."
         />
 
         {/* Certificate Cards Grid */}

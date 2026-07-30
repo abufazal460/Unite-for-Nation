@@ -1,7 +1,7 @@
 import logo from "../assets/logo/logo.png"
 export const site = {
-  name: "Unite of Nation",
-  fullName: "Unite of Nation Human Rights Foundation",
+  name: "Unite For Nation",
+  fullName: "Unite For Nation Human Rights Foundation",
   tagline: "Defending Innocents & Restoring Human Rights",
   logoUrl: logo,
   whatsappNumber: "919452900007", // International WhatsApp format without plus

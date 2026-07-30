@@ -4,7 +4,7 @@ export const hero = {
   eyebrow: "UNITED FOR JUSTICE & TRUTH",
   headline: "Protecting Innocents From False Accusations & Unjust Imprisonment",
   highlightedWords: ["False Accusations", "Unjust Imprisonment"],
-  paragraph: "Unite of Nation is a national non-profit advocacy organization providing legal awareness, defense guidance, investigation support, and voice to individuals wrongfully accused or incarcerated.",
+  paragraph: "Unite For Nation is a national non-profit advocacy organization providing legal awareness, defense guidance, investigation support, and voice to individuals wrongfully accused or incarcerated.",
   primaryButton: { label: "Seek Immediate Help", href: "/contact", variant: "primary" },
   secondaryButton: { label: "Our Work & Impact", href: "#process", variant: "outline" },
   image: heroImg,

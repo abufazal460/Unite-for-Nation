@@ -15,7 +15,7 @@ export function MapSection() {
 
         <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-100 h-[380px] sm:h-[480px] w-full">
           <iframe
-            title="Unite of Nation Location Map"
+            title="Unite For Nation Location Map"
             src={contact.googleMapsEmbedUrl}
             width="100%"
             height="100%"
