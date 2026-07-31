@@ -43,7 +43,7 @@ export function Navbar({ currentPath = "/" }) {
           <img
             src={site.logoUrl}
             alt="Unite For Nation Logo"
-            className="w-15 h-15 sm:w-12 sm:h-12 shadow-xs group-hover:scale-105 transition-transform"
+            className="w-14 h-14 sm:w-12 sm:h-12 shadow-xs group-hover:scale-105 transition-transform"
             referrerPolicy="no-referrer"
           />
           <div>
