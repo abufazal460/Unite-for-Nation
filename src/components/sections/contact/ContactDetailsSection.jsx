@@ -29,33 +29,33 @@ export function ContactDetailsSection() {
       btnColor: "bg-blue-600 hover:bg-blue-700 text-white",
       url: "https://www.facebook.com/share/1Md2dFpnck/"
     },
-    // {
-    //   id: "instagram",
-    //   name: "Instagram",
-    //   handle: "@Uniteofnation_ngo",
-    //   icon: FaInstagram,
-    //   color: "text-pink-600 bg-pink-50 border-pink-200 hover:bg-pink-100",
-    //   btnColor: "bg-pink-600 hover:bg-pink-700 text-white",
-    //   url: "https://instagram.com"
-    // },
-    // {
-    //   id: "twitter",
-    //   name: "Twitter / X",
-    //   handle: "@UniteOfNation",
-    //   icon: FaXTwitter,
-    //   color: "text-slate-900 bg-slate-100 border-slate-300 hover:bg-slate-200",
-    //   btnColor: "bg-slate-900 hover:bg-slate-800 text-white",
-    //   url: "https://twitter.com"
-    // },
-    // {
-    //   id: "youtube",
-    //   name: "YouTube Channel",
-    //   handle: "Unite For Nation Official",
-    //   icon: FaYoutube,
-    //   color: "text-red-600 bg-red-50 border-red-200 hover:bg-red-100",
-    //   btnColor: "bg-red-600 hover:bg-red-700 text-white",
-    //   url: "https://youtube.com"
-    // },
+    {
+      id: "instagram",
+      name: "Instagram",
+      handle: "@Uniteofnation_ngo",
+      icon: FaInstagram,
+      color: "text-pink-600 bg-pink-50 border-pink-200 hover:bg-pink-100",
+      btnColor: "bg-pink-600 hover:bg-pink-700 text-white",
+      url: "https://instagram.com"
+    },
+    {
+      id: "X",
+      name: "Unite4NationOrg",
+      handle: "@UniteOfNation",
+      icon: FaXTwitter,
+      color: "text-slate-900 bg-slate-100 border-slate-300 hover:bg-slate-200",
+      btnColor: "bg-slate-900 hover:bg-slate-800 text-white",
+      url: "https://x.com/Unite4NationOrg"
+    },
+    {
+      id: "youtube",
+      name: "Unite-for-Nation",
+      handle: "Unite For Nation Official",
+      icon: FaYoutube,
+      color: "text-red-600 bg-red-50 border-red-200 hover:bg-red-100",
+      btnColor: "bg-red-600 hover:bg-red-700 text-white",
+      url: "https://www.youtube.com/channel/UCBEFl7KofquOu8biYK_YMrQ"
+    },
    
   ];
 
