@@ -32,11 +32,11 @@ export function ContactDetailsSection() {
     {
       id: "instagram",
       name: "Instagram",
-      handle: "@Uniteofnation_ngo",
+      handle: "@unitefornationorg",
       icon: FaInstagram,
       color: "text-pink-600 bg-pink-50 border-pink-200 hover:bg-pink-100",
       btnColor: "bg-pink-600 hover:bg-pink-700 text-white",
-      url: "https://instagram.com"
+      url: "https://www.instagram.com/unitefornationorg/"
     },
     {
       id: "X",

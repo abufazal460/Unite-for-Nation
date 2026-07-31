@@ -28,7 +28,7 @@ export function Footer() {
     {
       name: "Instagram",
       icon: FaInstagram,
-      url: "https://instagram.com",
+      url: "https://www.instagram.com/unitefornationorg/",
       color: "hover:text-pink-600 hover:bg-pink-50",
     },
     {
