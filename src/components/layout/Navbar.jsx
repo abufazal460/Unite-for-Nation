@@ -43,15 +43,15 @@ export function Navbar({ currentPath = "/" }) {
           <img
             src={site.logoUrl}
             alt="Unite For Nation Logo"
-            className="w-14 h-14 sm:w-12 sm:h-12 shadow-xs group-hover:scale-105 transition-transform"
+            className="w-16 h-16 sm:w-16 sm:h-18 shadow-xs group-hover:scale-105 transition-transform"
             referrerPolicy="no-referrer"
           />
           <div>
-            <span className="block text-lg sm:text-xl font-heading font-extrabold text-slate-900 tracking-tight group-hover:text-red-700 transition-colors">
+            <span className="block text-2xl sm:text-2xl font-heading font-extrabold text-slate-900 tracking-tight group-hover:text-red-700 transition-colors">
               {site.name}
             </span>
             <span className="block text-xs text-slate-600 font-mono tracking-wider uppercase font-semibold">
-              Human Rights Foundation
+             A Human Rights Organization
             </span>
           </div>
         </a>
