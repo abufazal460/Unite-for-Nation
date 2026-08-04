@@ -1,5 +1,6 @@
 // components/ui/Accordion.jsx
 import React, { useState, useRef, useEffect } from 'react';
+import { motion } from 'motion/react';
 
 const Accordion = ({ question, answer, isLast = false }) => {
   const [isOpen, setIsOpen] = useState(false);

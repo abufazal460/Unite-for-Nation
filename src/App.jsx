@@ -4,6 +4,7 @@ import About from './pages/About';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import Donate from './pages/Donate';
 
 export function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -54,6 +55,10 @@ export function App() {
 
   if (cleanPath === '/contact' || cleanPath === '/contact/') {
     return <Contact />;
+  }
+
+  if (cleanPath === '/donate' || cleanPath === '/donate/') {
+    return <Donate />;
   }
 
   return <NotFound />;

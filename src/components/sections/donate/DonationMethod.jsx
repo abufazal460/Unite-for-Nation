@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import BankDetails from './BankDetails';
 import { fadeInUp, staggerContainer } from './animations';
+import CopyButton from '../../ui/CopyButton';
 
 const DonationMethod = ({ data }) => {
   const [activeMethod, setActiveMethod] = useState('upi');
