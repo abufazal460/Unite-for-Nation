@@ -1,127 +1,98 @@
-// components/section/donate/DonationAmount.jsx
-import React, { useState, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { fadeInUp, staggerContainer } from './animations';
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { staggerContainer, staggerItem, viewportOnce } from "./animations";
 
-const DonationAmount = ({ data }) => {
-  const [selectedAmount, setSelectedAmount] = useState(null);
-  const [customAmount, setCustomAmount] = useState('');
+const RADIUS = 42;
+const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+
+function ProgressRing({ progress }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const isInView = useInView(ref, { once: true, amount: 0.6 });
 
-  const handleAmountSelect = (amount) => {
-    setSelectedAmount(amount);
-    setCustomAmount('');
-  };
+  return (
+    <svg
+      ref={ref}
+      viewBox="0 0 100 100"
+      className="h-24 w-24"
+      role="img"
+      aria-label={`${progress}% of this tier's funding goal reached`}
+    >
+      <circle
+        cx="50"
+        cy="50"
+        r={RADIUS}
+        fill="none"
+        stroke="#E2E8F0"
+        strokeWidth="8"
+      />
+      <motion.circle
+        cx="50"
+        cy="50"
+        r={RADIUS}
+        fill="none"
+        stroke="#1F6F5F"
+        strokeWidth="8"
+        strokeLinecap="round"
+        strokeDasharray={CIRCUMFERENCE}
+        initial={{ strokeDashoffset: CIRCUMFERENCE }}
+        animate={
+          isInView
+            ? { strokeDashoffset: CIRCUMFERENCE - (progress / 100) * CIRCUMFERENCE }
+            : {}
+        }
+        transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+        transform="rotate(-90 50 50)"
+      />
+    </svg>
+  );
+}
 
-  const handleCustomAmount = (e) => {
-    const value = e.target.value;
-    setCustomAmount(value);
-    setSelectedAmount(null);
-  };
-
-  const handleDonate = () => {
-    const amount = selectedAmount || customAmount;
-    if (amount) {
-      alert(`Thank you for donating ₹${amount}!`);
-    }
-  };
+/**
+ * "Where Your Donation Goes" tiered giving section. Each tier renders a
+ * circular progress ring that animates from 0 to its configured value.
+ *
+ * @param {{ donationAmount: import("../../../data/donationAmountData").donationAmountData }} props
+ */
+export default function DonationAmount({ donationAmount }) {
+  if (!donationAmount?.tiers?.length) return null;
 
   return (
     <section
-      ref={ref}
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-white"
-      id="donate"
+      id="donation-amount"
+      aria-labelledby="donation-amount-heading"
+      className="bg-[#F8FAFC] px-5 py-16 sm:px-8 lg:px-12"
     >
-      <div className="max-w-4xl mx-auto">
-        <motion.div
-          variants={staggerContainer}
+      <div className="mx-auto max-w-7xl">
+        <p className="text-sm font-semibold uppercase tracking-wide text-[#1F6F5F]">
+          {donationAmount.eyebrow}
+        </p>
+        <h2 id="donation-amount-heading" className="mt-2 max-w-2xl text-3xl font-bold text-[#0F172A] sm:text-4xl">
+          {donationAmount.heading}
+        </h2>
+
+        <motion.ul
+          variants={staggerContainer()}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="text-center space-y-12"
+          whileInView="visible"
+          viewport={viewportOnce}
+          className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5"
         >
-          <motion.div variants={fadeInUp} className="space-y-4">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">
-              {data.title}
-            </h2>
-            <p className="text-[#0F172A]/70 max-w-2xl mx-auto">
-              {data.description}
-            </p>
-          </motion.div>
-
-          {/* Amount Selection */}
-          <motion.div variants={fadeInUp} className="space-y-6">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {data.amounts.map((item, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleAmountSelect(item.value)}
-                  className={`p-4 rounded-xl border-2 transition-all duration-300 ${
-                    selectedAmount === item.value
-                      ? 'border-[#1F6F5F] bg-[#1F6F5F]/5 shadow-lg'
-                      : 'border-[#1F6F5F]/20 hover:border-[#1F6F5F]/40'
-                  }`}
-                >
-                  <div className="text-xl font-bold text-[#0F172A]">
-                    ₹{item.value}
-                  </div>
-                  <div className="text-xs text-[#0F172A]/60 mt-1">
-                    {item.label}
-                  </div>
-                </button>
-              ))}
-            </div>
-
-            <div className="max-w-xs mx-auto">
-              <input
-                type="number"
-                placeholder="Custom amount (₹)"
-                value={customAmount}
-                onChange={handleCustomAmount}
-                className="w-full px-4 py-3 rounded-xl border-2 border-[#1F6F5F]/20 focus:border-[#1F6F5F] focus:outline-none transition-all duration-300 text-center"
-                min="1"
-              />
-            </div>
-
-            <button
-              onClick={handleDonate}
-              className="px-12 py-4 bg-[#1F6F5F] text-white rounded-xl font-semibold hover:bg-[#1A5D4F] transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+          {donationAmount.tiers.map((tier) => (
+            <motion.li
+              key={tier.id}
+              variants={staggerItem}
+              className="flex flex-col items-center gap-3 rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm"
             >
-              Donate Now
-            </button>
-          </motion.div>
-
-          {/* Bank Details */}
-          <motion.div
-            variants={fadeInUp}
-            className="bg-[#F8FAFC] rounded-2xl p-6 sm:p-8 text-left"
-          >
-            <h3 className="font-semibold text-[#0F172A] text-lg mb-4">
-              {data.bankDetails.title}
-            </h3>
-            <div className="grid sm:grid-cols-2 gap-4 text-sm">
-              {data.bankDetails.fields.map((field, index) => (
-                <div key={index} className="space-y-1">
-                  <label className="text-[#0F172A]/50">{field.label}</label>
-                  <div className="font-medium text-[#0F172A] flex items-center justify-between">
-                    <span>{field.value}</span>
-                    {field.copyable && (
-                      <button
-                        onClick={() => navigator.clipboard.writeText(field.value)}
-                        className="text-[#1F6F5F] hover:text-[#1A5D4F] text-xs"
-                      >
-                        Copy
-                      </button>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </motion.div>
+              <div className="relative flex h-24 w-24 items-center justify-center">
+                <ProgressRing progress={tier.progress} />
+                <span className="absolute text-sm font-bold text-[#0F172A]">{tier.amount}</span>
+              </div>
+              <p className="text-base font-semibold text-[#0F172A]">{tier.title}</p>
+              <p className="text-sm text-slate-500">{tier.description}</p>
+            </motion.li>
+          ))}
+        </motion.ul>
       </div>
     </section>
   );
-};
-
-export default DonationAmount;
+}

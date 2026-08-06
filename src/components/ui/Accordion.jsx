@@ -1,81 +1,66 @@
-// components/ui/Accordion.jsx
-import React, { useState, useRef, useEffect } from 'react';
-import { motion } from 'motion/react';
+import { motion } from "framer-motion";
+import { FiChevronDown } from "react-icons/fi";
 
-const Accordion = ({ question, answer, isLast = false }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const contentRef = useRef(null);
-  const [height, setHeight] = useState(0);
-
-  useEffect(() => {
-    if (contentRef.current) {
-      setHeight(isOpen ? contentRef.current.scrollHeight : 0);
-    }
-  }, [isOpen]);
-
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      handleToggle();
-    }
-  };
-
-  return (
-    <div
-      className={`bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-[#1F6F5F]/5 ${
-        !isLast ? 'mb-3' : ''
-      }`}
-      role="article"
-    >
-      <button
-        onClick={handleToggle}
-        onKeyDown={handleKeyDown}
-        className="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none focus:ring-2 focus:ring-[#1F6F5F]/50 rounded-xl"
-        aria-expanded={isOpen}
-        aria-controls={`accordion-content-${question.slice(0, 10)}`}
-        id={`accordion-header-${question.slice(0, 10)}`}
-      >
-        <span className="font-semibold text-[#0F172A] text-sm sm:text-base pr-4">
-          {question}
-        </span>
-        <motion.span
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3, ease: 'easeInOut' }}
-          className="flex-shrink-0 text-[#1F6F5F] text-xl"
-          aria-hidden="true"
-        >
-          ▼
-        </motion.span>
-      </button>
-
-      <div
-        ref={contentRef}
-        style={{
-          height: `${height}px`,
-          overflow: 'hidden',
-          transition: 'height 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-        }}
-        role="region"
-        aria-labelledby={`accordion-header-${question.slice(0, 10)}`}
-        id={`accordion-content-${question.slice(0, 10)}`}
-      >
-        <div className="px-6 pb-4">
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isOpen ? 1 : 0 }}
-            transition={{ duration: 0.2, delay: isOpen ? 0.1 : 0 }}
-            className="text-[#0F172A]/70 text-sm sm:text-base leading-relaxed"
-          >
-            {answer}
-          </motion.p>
-        </div>
-      </div>
-    </div>
-  );
+const panelVariants = {
+  collapsed: { height: 0, opacity: 0 },
+  open: {
+    height: "auto",
+    opacity: 1,
+    transition: { height: { duration: 0.35, ease: [0.22, 1, 0.36, 1] }, opacity: { duration: 0.25, delay: 0.05 } },
+  },
 };
 
-export default Accordion;
+const collapseTransition = { duration: 0.3, ease: [0.22, 1, 0.36, 1] };
+
+/**
+ * Single accessible accordion row: a button header (with rotating
+ * chevron) controlling a height-animated, fade-in answer panel.
+ *
+ * @param {{
+ *   id: string,
+ *   question: string,
+ *   answer: string,
+ *   isOpen: boolean,
+ *   onToggle: (id: string) => void,
+ * }} props
+ */
+export default function Accordion({ id, question, answer, isOpen, onToggle }) {
+  const headerId = `accordion-header-${id}`;
+  const panelId = `accordion-panel-${id}`;
+
+  return (
+    <div className="border-b border-slate-200 last:border-b-0">
+      <h3 className="m-0">
+        <button
+          type="button"
+          id={headerId}
+          aria-expanded={isOpen}
+          aria-controls={panelId}
+          onClick={() => onToggle(id)}
+          className="flex w-full items-center justify-between gap-4 py-5 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1F6F5F]"
+        >
+          <span className="text-base font-semibold text-[#0F172A]">{question}</span>
+          <motion.span
+            animate={{ rotate: isOpen ? 180 : 0 }}
+            transition={collapseTransition}
+            className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1F6F5F]/10 text-[#1F6F5F]"
+          >
+            <FiChevronDown aria-hidden="true" className="h-4 w-4" />
+          </motion.span>
+        </button>
+      </h3>
+
+      <motion.div
+        id={panelId}
+        role="region"
+        aria-labelledby={headerId}
+        initial="collapsed"
+        animate={isOpen ? "open" : "collapsed"}
+        variants={panelVariants}
+        className="overflow-hidden"
+      >
+        <p className="pb-5 text-sm leading-relaxed text-slate-600">{answer}</p>
+      </motion.div>
+    </div>
+  );
+}

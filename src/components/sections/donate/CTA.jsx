@@ -1,58 +1,47 @@
-// components/section/donate/CTA.jsx
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { fadeInUp, staggerContainer } from './animations';
+import { motion } from "framer-motion";
+import { GiLifeInTheBalance  } from "react-icons/gi";
+import { fadeUp, scrollToId, viewportOnce } from "./animations";
 
-const CTA = ({ data }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
-
-  const handleScrollToDonate = () => {
-    const element = document.getElementById('donation-method');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+/**
+ * Closing call-to-action banner. Its button reuses `scrollToId` so it
+ * shares the exact same Lenis-aware smooth-scroll behavior as the
+ * hero CTAs.
+ *
+ * @param {{ cta: import("../../../data/faqData").finalCtaData }} props
+ */
+export default function CTA({ cta }) {
+  if (!cta) return null;
 
   return (
-    <section
-      ref={ref}
-      className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#1F6F5F] to-[#1A5D4F]"
-      aria-labelledby="cta-title"
-    >
-      <div className="max-w-4xl mx-auto">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="text-center space-y-6"
+    <section aria-labelledby="final-cta-heading" className="bg-[#F8FAFC] px-5 py-16 sm:px-8 lg:px-12">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#134E4A] px-6 py-12 text-center shadow-lg sm:px-12 sm:py-16"
+      >
+        <GiLifeInTheBalance 
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-6 -bottom-6 h-40 w-40 text-white/5 sm:h-56 sm:w-56"
+        />
+
+        <h2 id="final-cta-heading" className="text-3xl font-bold text-white sm:text-4xl">
+          {cta.heading}
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
+          {cta.description}
+        </p>
+
+        <button
+          type="button"
+          aria-label={cta.button.ariaLabel ?? cta.button.label}
+          onClick={() => scrollToId(cta.button.targetId)}
+          className="mt-8 inline-flex items-center justify-center rounded-full bg-[#D4AF37] px-8 py-3 text-sm font-semibold text-[#0F172A] transition-colors duration-200 hover:bg-[#c49f2f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
-          <motion.h2
-            id="cta-title"
-            variants={fadeInUp}
-            className="text-3xl sm:text-5xl font-bold text-white"
-          >
-            {data.title}
-          </motion.h2>
-          <motion.p
-            variants={fadeInUp}
-            className="text-white/80 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed"
-          >
-            {data.description}
-          </motion.p>
-          <motion.div variants={fadeInUp}>
-            <button
-              onClick={handleScrollToDonate}
-              className="px-10 py-4 bg-[#D4AF37] text-[#0F172A] rounded-xl font-semibold hover:bg-[#C4A027] transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-0.5"
-              aria-label="Donate now"
-            >
-              {data.buttonText}
-            </button>
-          </motion.div>
-        </motion.div>
-      </div>
+          {cta.button.label}
+        </button>
+      </motion.div>
     </section>
   );
-};
-
-export default CTA;
+}

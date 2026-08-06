@@ -1,31 +1,59 @@
-// data/faqData.js
+/**
+ * Content for the FAQ accordion rendered by FAQ.jsx.
+ */
 export const faqData = {
-  title: 'Frequently Asked Questions',
-  description: 'Find answers to common questions about donating, transparency, and our work.',
+  eyebrow: "FAQ",
+  heading: "Common Questions About Giving",
   items: [
     {
-      question: 'Is my donation secure?',
-      answer: 'Yes, all donations are processed through secure, encrypted payment gateways. We use SSL encryption and comply with data protection regulations to ensure your financial information remains safe and private.',
+      id: "is-donation-safe",
+      question: "Is my donation secure?",
+      answer:
+        "Yes. All payments are processed through PCI-DSS compliant gateways with end-to-end encryption, and every transaction is logged for audit purposes.",
     },
     {
-      question: 'How is my donation used?',
-      answer: 'Your donation directly supports legal assistance, emergency bail support, documentation, and human rights protection programs. We maintain full transparency with regular financial reports and impact updates.',
+      id: "how-is-donation-used",
+      question: "How is my donation used?",
+      answer:
+        "Funds go directly toward legal consultations, emergency bail assistance, case documentation and awareness campaigns, as shown in the 'Where Your Donation Goes' breakdown above.",
     },
     {
-      question: 'Will I receive a receipt?',
-      answer: 'Yes, you will receive an automatic receipt via email for all donations. This receipt serves as official documentation for tax purposes where applicable.',
+      id: "will-i-get-a-receipt",
+      question: "Will I receive a receipt?",
+      answer:
+        "A donation receipt eligible for 80G tax exemption is emailed automatically within minutes of your contribution being confirmed.",
     },
     {
-      question: 'Can I donate monthly?',
-      answer: 'Yes, we offer monthly recurring donation options. You can set up a monthly contribution through our secure payment portal, and you can modify or cancel your recurring donation at any time.',
+      id: "can-i-donate-monthly",
+      question: "Can I set up a monthly donation?",
+      answer:
+        "Yes. During checkout you can choose a recurring monthly contribution, which you're free to modify or cancel at any time.",
     },
     {
-      question: 'Can I send it to my NGO?',
-      answer: 'We welcome partnerships with other NGOs. Please contact our partnerships team directly to discuss collaboration opportunities and how we can work together to amplify impact.',
+      id: "how-do-i-verify-the-ngo",
+      question: "How can I verify this NGO?",
+      answer:
+        "Our registration, 12A and 80G certificates are published in the Verification section above, and can be cross-checked against the issuing government portals.",
     },
     {
-      question: 'Can international donors contribute?',
-      answer: 'Yes, international donors can contribute through our secure payment platform. We support multiple currencies and international payment methods for global supporters.',
+      id: "international-donors",
+      question: "Can international donors contribute?",
+      answer:
+        "International contributions are accepted in accordance with FCRA regulations through a dedicated foreign-contribution account; contact us for details.",
     },
   ],
+};
+
+/**
+ * Content for the final call-to-action banner rendered by CTA.jsx.
+ */
+export const finalCtaData = {
+  heading: "Justice Needs Your Support",
+  description:
+    "Every contribution helps someone wrongly accused access a fair legal defense, emergency bail support and a path back to their life.",
+  button: {
+    label: "Donate Now",
+    targetId: "donation-method",
+    ariaLabel: "Scroll to donation methods",
+  },
 };

@@ -1,126 +1,118 @@
-// components/section/donate/DonationMethod.jsx
-import React, { useState, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import BankDetails from './BankDetails';
-import { fadeInUp, staggerContainer } from './animations';
-import CopyButton from '../../ui/CopyButton';
+import { motion } from "framer-motion";
+import { FiDownload } from "react-icons/fi";
+import CopyButton from "../../ui/CopyButton";
+import { fadeUp, scaleIn, viewportOnce } from "./animations";
 
-const DonationMethod = ({ data }) => {
-  const [activeMethod, setActiveMethod] = useState('upi');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
+/**
+ * Handles the QR "Download QR" action by triggering a browser download
+ * of the QR image via a temporary anchor element.
+ */
+function downloadQr(image, fileName) {
+  const link = document.createElement("a");
+  link.href = image;
+  link.download = fileName || "donation-qr.png";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+/**
+ * Donation Methods section: a glass card holding a downloadable QR on
+ * one side and UPI / bank transfer details (with copy-to-clipboard)
+ * on the other.
+ *
+ * @param {{ donationMethod: import("../../../data/donationMethodData").donationMethodData }} props
+ */
+export default function DonationMethod({ donationMethod }) {
+  if (!donationMethod) return null;
+
+  const { qr, upi, bank } = donationMethod;
 
   return (
     <section
-      ref={ref}
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F8FAFC]"
       id="donation-method"
+      aria-labelledby="donation-method-heading"
+      className="bg-[#F8FAFC] px-5 py-16 sm:px-8 lg:px-12"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="mx-auto max-w-7xl">
         <motion.div
-          variants={staggerContainer}
+          variants={fadeUp}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="space-y-8"
+          whileInView="visible"
+          viewport={viewportOnce}
         >
-          <motion.div variants={fadeInUp} className="text-center space-y-4">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">
-              {data.title}
-            </h2>
-            <p className="text-[#0F172A]/70 max-w-2xl mx-auto">
-              {data.description}
-            </p>
-          </motion.div>
+          <p className="text-sm font-semibold uppercase tracking-wide text-[#1F6F5F]">
+            {donationMethod.eyebrow}
+          </p>
+          <h2 id="donation-method-heading" className="mt-2 max-w-2xl text-3xl font-bold text-[#0F172A] sm:text-4xl">
+            {donationMethod.heading}
+          </h2>
+        </motion.div>
 
-          {/* Method Tabs */}
-          <motion.div variants={fadeInUp} className="flex justify-center gap-4 flex-wrap">
-            {data.methods.map((method) => (
-              <button
-                key={method.id}
-                onClick={() => setActiveMethod(method.id)}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                  activeMethod === method.id
-                    ? 'bg-[#1F6F5F] text-white shadow-lg'
-                    : 'bg-white text-[#0F172A] border-2 border-[#1F6F5F]/20 hover:border-[#1F6F5F]/40'
-                }`}
-              >
-                {method.icon} {method.label}
-              </button>
-            ))}
-          </motion.div>
-
-          {/* Method Content */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          className="mt-10 grid grid-cols-1 gap-8 rounded-3xl border border-[#1F6F5F]/15 bg-[#1F6F5F]/5 p-6 shadow-sm backdrop-blur-xl sm:p-8 lg:grid-cols-[280px_minmax(0,1fr)] lg:items-center lg:gap-10"
+        >
           <motion.div
-            variants={fadeInUp}
-            className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl p-6 sm:p-8 border border-white/20"
+            variants={scaleIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            className="flex flex-col items-center gap-4"
           >
-            {activeMethod === 'upi' && (
-              <div className="space-y-6">
-                <div className="text-center">
-                  <div className="w-48 h-48 mx-auto bg-[#F8FAFC] rounded-xl flex items-center justify-center border-2 border-[#1F6F5F]/20">
-                    <img
-                      src={data.upi.qrImage}
-                      alt="UPI QR Code"
-                      className="w-full h-full object-contain p-4"
-                      loading="lazy"
-                    />
-                  </div>
-                  <button
-                    onClick={() => {
-                      const link = document.createElement('a');
-                      link.download = 'upi-qr-code.png';
-                      link.href = data.upi.qrImage;
-                      link.click();
-                    }}
-                    className="mt-4 text-sm text-[#1F6F5F] hover:text-[#1A5D4F] font-semibold"
-                  >
-                    ↓ Download QR Code
-                  </button>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {data.upi.fields.map((field, index) => (
-                    <div key={index} className="space-y-1">
-                      <label className="text-xs text-[#0F172A]/50">{field.label}</label>
-                      <div className="font-medium text-[#0F172A] flex items-center justify-between bg-[#F8FAFC] p-2 rounded-lg">
-                        <span>{field.value}</span>
-                        {field.copyable && (
-                          <CopyButton text={field.value} />
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {activeMethod === 'bank' && (
-              <BankDetails data={data.bank} />
-            )}
-
-            {activeMethod === 'card' && (
-              <div className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {data.card.fields.map((field, index) => (
-                    <div key={index} className="space-y-1">
-                      <label className="text-xs text-[#0F172A]/50">{field.label}</label>
-                      <input
-                        type={field.type}
-                        placeholder={field.placeholder}
-                        className="w-full px-4 py-2 rounded-lg border-2 border-[#1F6F5F]/20 focus:border-[#1F6F5F] focus:outline-none transition-all duration-300"
-                      />
-                    </div>
-                  ))}
-                </div>
-                <button className="w-full py-3 bg-[#1F6F5F] text-white rounded-xl font-semibold hover:bg-[#1A5D4F] transition-all duration-300">
-                  Pay Now
-                </button>
-              </div>
-            )}
+            <div className="w-full max-w-[240px] rounded-2xl bg-white p-4 shadow-md">
+              <img
+                src={qr.image}
+                alt={qr.imageAlt}
+                width={200}
+                height={200}
+                loading="lazy"
+                decoding="async"
+                className="mx-auto aspect-square w-full rounded-lg object-contain"
+              />
+            </div>
+            <button
+              type="button"
+              onClick={() => downloadQr(qr.image, qr.downloadFileName)}
+              className="inline-flex items-center gap-2 rounded-full bg-[#1F6F5F] px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#195A4D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1F6F5F]"
+            >
+              <FiDownload aria-hidden="true" className="h-4 w-4" />
+              {qr.downloadLabel}
+            </button>
           </motion.div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{upi.label}</p>
+              <div className="mt-2 flex items-center justify-between gap-3 rounded-xl bg-white/70 p-3">
+                <span className="truncate text-sm font-medium text-[#0F172A]">{upi.id}</span>
+                <CopyButton value={upi.id} label="Copy" />
+              </div>
+            </div>
+
+            <div className="sm:col-span-2">
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{bank.label}</p>
+              <dl className="mt-2 divide-y divide-slate-200/70 rounded-xl bg-white/70">
+                {bank.fields.map((field) => (
+                  <div
+                    key={field.id}
+                    className="flex flex-wrap items-center justify-between gap-3 px-3 py-3 first:rounded-t-xl last:rounded-b-xl"
+                  >
+                    <dt className="text-sm text-slate-500">{field.label}</dt>
+                    <div className="flex items-center gap-3">
+                      <dd className="text-sm font-medium text-[#0F172A]">{field.value}</dd>
+                      {field.copyable ? <CopyButton value={field.value} label="Copy" /> : null}
+                    </div>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
   );
-};
-
-export default DonationMethod;
+}

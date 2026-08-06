@@ -1,42 +1,55 @@
-// components/section/donate/TrustCards.jsx
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { fadeInUp, staggerContainer } from './animations';
+import { motion } from "framer-motion";
+import { GiCash } from "react-icons/gi";
+import { MdOutlineVerified , MdVerified , MdOutlineBalance } from "react-icons/md";
+import { staggerContainer, staggerItem, viewportOnce } from "./animations";
 
-const TrustCards = ({ data }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
-
-  return (
-    <section
-      ref={ref}
-      className="py-16 px-4 sm:px-6 lg:px-8 bg-white"
-      id="trust"
-    >
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
-        >
-          {data.map((item, index) => (
-            <motion.div
-              key={index}
-              variants={fadeInUp}
-              className="bg-[#F8FAFC] rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300 border border-[#1F6F5F]/5"
-            >
-              <div className="text-3xl mb-3">{item.icon}</div>
-              <h3 className="font-semibold text-[#0F172A] text-sm sm:text-base">
-                {item.title}
-              </h3>
-              <p className="text-xs text-[#0F172A]/60 mt-1">{item.subtitle}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
+const ICONS = {
+  shieldCheck: MdVerified,
+  handCoins: GiCash,
+  verifiedBadge: MdOutlineVerified,
+  scaleBalance: MdOutlineBalance,
 };
 
-export default TrustCards;
+/**
+ * Four-card trust bar shown just below the hero.
+ *
+ * @param {{ trust: import("../../../data/trustData").trustData }} props
+ */
+export default function TrustCards({ trust }) {
+  if (!trust?.items?.length) return null;
+
+  return (
+    <section aria-labelledby="trust-bar-heading" className="bg-[#F8FAFC] px-5 py-14 sm:px-8 lg:px-12">
+      <h2 id="trust-bar-heading" className="sr-only">
+        {trust.eyebrow}
+      </h2>
+
+      <motion.ul
+        variants={staggerContainer()}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        className="mx-auto grid max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+      >
+        {trust.items.map((item) => {
+          const Icon = ICONS[item.icon] ?? FiShieldCheck;
+          return (
+            <motion.li
+              key={item.id}
+              variants={staggerItem}
+              className="flex flex-col items-center gap-3 rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm"
+            >
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1F6F5F]/10 text-[#1F6F5F]">
+                <Icon aria-hidden="true" className="h-6 w-6" />
+              </span>
+              <p className="text-base font-semibold text-[#0F172A]">{item.title}</p>
+              {item.description ? (
+                <p className="text-sm text-slate-500">{item.description}</p>
+              ) : null}
+            </motion.li>
+          );
+        })}
+      </motion.ul>
+    </section>
+  );
+}

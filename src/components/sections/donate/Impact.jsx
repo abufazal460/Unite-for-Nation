@@ -1,76 +1,68 @@
-// components/section/donate/Impact.jsx
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import CounterCard from './CounterCard';
-import { fadeInUp, slideInLeft, slideInRight, staggerContainer } from './animations';
+import { motion } from "framer-motion";
+import CounterCard from "./CounterCard";
+import { slideInLeft, slideInRight, viewportOnce } from "./animations";
 
-const Impact = ({ data }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
+/**
+ * "Why Your Support Matters" section: illustration + copy, followed by
+ * an animated grid of impact counters.
+ *
+ * @param {{ impact: import("../../../data/impactData").impactData }} props
+ */
+export default function Impact({ impact }) {
+  if (!impact) return null;
 
   return (
-    <section
-      ref={ref}
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F8FAFC]"
-      id="impact"
-    >
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          variants={staggerContainer}
+    <section id="impact" aria-labelledby="impact-heading" className="bg-[#F8FAFC] px-5 py-16 sm:px-8 lg:px-12">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <motion.img
+          variants={slideInLeft}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="grid lg:grid-cols-2 gap-12 items-center"
+          whileInView="visible"
+          viewport={viewportOnce}
+          src={impact.image}
+          alt={impact.imageAlt}
+          width={560}
+          height={420}
+          loading="lazy"
+          decoding="async"
+          className="mx-auto w-full max-w-md rounded-3xl object-contain"
+        />
+
+        <motion.div
+          variants={slideInRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
         >
-          {/* Left - Image slides from left */}
-          <motion.div
-            variants={slideInLeft}
-            className="relative order-2 lg:order-1"
-          >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={data.image}
-                alt="Impact visualization"
-                className="w-full h-auto object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1F6F5F]/20 to-transparent" />
-            </div>
-          </motion.div>
-
-          {/* Right - Content slides from right */}
-          <motion.div
-            variants={slideInRight}
-            className="order-1 lg:order-2 space-y-8"
-          >
-            <div className="space-y-4">
-              <span className="inline-block px-4 py-1 bg-[#1F6F5F]/10 text-[#1F6F5F] rounded-full text-sm font-semibold">
-                {data.badge}
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">
-                {data.title}
-              </h2>
-              <p className="text-[#0F172A]/70 leading-relaxed">
-                {data.description}
+          <p className="text-sm font-semibold uppercase tracking-wide text-[#1F6F5F]">
+            {impact.eyebrow}
+          </p>
+          <h2 id="impact-heading" className="mt-2 text-3xl font-bold text-[#0F172A] sm:text-4xl">
+            {impact.heading}
+          </h2>
+          <div className="mt-4 space-y-4">
+            {impact.paragraphs.map((paragraph) => (
+              <p key={paragraph.slice(0, 24)} className="text-base leading-relaxed text-slate-600">
+                {paragraph}
               </p>
-            </div>
-
-            {/* Counters Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {data.counters.map((counter, index) => (
-                <CounterCard
-                  key={index}
-                  value={counter.value}
-                  label={counter.label}
-                  suffix={counter.suffix}
-                  delay={index * 0.1}
-                />
-              ))}
-            </div>
-          </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
+
+      {impact.counters?.length ? (
+        <div className="mx-auto mt-14 grid max-w-7xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+          {impact.counters.map((counter) => (
+            <CounterCard
+              key={counter.id}
+              value={counter.value}
+              decimals={counter.decimals}
+              suffix={counter.suffix}
+              label={counter.label}
+            />
+          ))}
+        </div>
+      ) : null}
     </section>
   );
-};
-
-export default Impact; 
+}

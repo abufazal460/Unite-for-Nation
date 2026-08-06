@@ -1,25 +1,47 @@
-// data/donationAmountData.js
+/**
+ * Content for the "Where Your Donation Goes" tiered giving section
+ * rendered by DonationAmount.jsx. `progress` drives the circular ring
+ * fill and is a relative indicator of how far each tier goes toward
+ * fully covering that stage of support (not a fundraising total).
+ */
 export const donationAmountData = {
-  title: 'Choose Your Donation Amount',
-  description:
-    'Select an amount or enter your own. Every contribution, big or small, makes a difference in someone\'s life.',
-  amounts: [
-    { value: 500, label: 'Document Verification' },
-    { value: 1000, label: 'Legal Consultation' },
-    { value: 2500, label: 'Emergency Support' },
-    { value: 5000, label: 'Bail Documentation' },
-    { value: 10000, label: 'Legal Representation' },
-    { value: 25000, label: 'Human Rights Advocacy' },
+  eyebrow: "Where Your Donation Goes",
+  heading: "Every Tier Funds a Real Step in the Legal Process",
+  tiers: [
+    {
+      id: "tier-500",
+      amount: "₹500",
+      progress: 20,
+      title: "Document Verification",
+      description: "Covers notarization and verification of case documents.",
+    },
+    {
+      id: "tier-1000",
+      amount: "₹1,000",
+      progress: 40,
+      title: "Legal Consultation",
+      description: "Funds a full consultation session with a volunteer lawyer.",
+    },
+    {
+      id: "tier-2500",
+      amount: "₹2,500",
+      progress: 60,
+      title: "Emergency Bail Support",
+      description: "Contributes toward urgent bail assistance for the wrongly accused.",
+    },
+    {
+      id: "tier-5000",
+      amount: "₹5,000",
+      progress: 80,
+      title: "Bail Documentation",
+      description: "Covers full paperwork and filing costs for a bail application.",
+    },
+    {
+      id: "tier-10000",
+      amount: "₹10,000+",
+      progress: 100,
+      title: "Post-Conviction Support",
+      description: "Funds appeals and long-term rehabilitation support for survivors.",
+    },
   ],
-  bankDetails: {
-    title: 'Bank Transfer Details',
-    fields: [
-      { label: 'Account Holder', value: 'United for Human Rights Foundation', copyable: false },
-      { label: 'Account Number', value: '1234567890002456', copyable: true },
-      { label: 'IFSC Code', value: 'SBIN0012234', copyable: true },
-      { label: 'Bank Name', value: 'State Bank of India', copyable: false },
-      { label: 'Branch', value: 'Jamia Nagar', copyable: false },
-      { label: 'Account Type', value: 'Current', copyable: false },
-    ],
-  },
 };

@@ -1,16 +1,22 @@
-// data/impactData.js
+/**
+ * Content for the "Why Your Support Matters" section and the impact
+ * counters grid rendered underneath it via CounterCard.jsx.
+ */
 export const impactData = {
-  badge: 'Our Impact',
-  title: 'Making a Difference Together',
-  description:
-    'Every contribution helps us provide legal aid, emergency support, and human rights protection to those who need it most. Together, we can fight injustice and ensure fair representation for all.',
-  image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=800&h=600&fit=crop',
+  image: "https://api.dicebear.com/9.x/shapes/svg?seed=unit-of-nation-impact",
+  imageAlt: "Illustration of a lawyer and client reviewing legal documents",
+  eyebrow: "Why Your Donation Matters",
+  heading: "Why Your Support Matters",
+  paragraphs: [
+    "Countless individuals face false accusations without the means to mount a proper legal defense. Families exhaust their savings on legal fees after an arrest, long before a verdict is ever reached.",
+    "Your support funds case documentation, legal consultation, emergency bail assistance and awareness campaigns that safeguard the right to a fair trial and protect basic human dignity.",
+  ],
   counters: [
-    { value: 83000, label: 'People Assisted', suffix: '+' },
-    { value: 19600, label: 'Legal Consultations', suffix: '+' },
-    { value: 55800, label: 'Emergency Bail Requests', suffix: '+' },
-    { value: 3272, label: 'Volunteer Lawyers', suffix: '' },
-    { value: 31800, label: 'States Reached', suffix: '+' },
-    { value: 34800, label: 'Cases Supported', suffix: '+' },
+    { id: "people-assisted", value: 83.4, decimals: 1, suffix: "K", label: "People Assisted" },
+    { id: "legal-consultations", value: 19.6, decimals: 1, suffix: "K", label: "Legal Consultations" },
+    { id: "emergency-bail", value: 5.8, decimals: 1, suffix: "K", label: "Emergency Bail Requests" },
+    { id: "volunteer-lawyers", value: 320, decimals: 0, suffix: "+", label: "Volunteer Lawyers" },
+    { id: "states-reached", value: 34, decimals: 0, suffix: "", label: "States Reached" },
+    { id: "cases-supported", value: 4.8, decimals: 1, suffix: "K", label: "Cases Supported" },
   ],
 };

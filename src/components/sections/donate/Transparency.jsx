@@ -1,55 +1,63 @@
-// components/section/donate/Transparency.jsx
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { fadeInUp, staggerContainer } from './animations';
+import { motion } from "framer-motion";
+import { FiFileText, FiBriefcase, FiCheckCircle, FiShield, FiLock, FiCreditCard } from "react-icons/fi";
+import { staggerContainer, staggerItem, viewportOnce } from "./animations";
 
-const Transparency = ({ data }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
+const ICONS = {
+  fileText: FiFileText,
+  briefcase: FiBriefcase,
+  checkCircle: FiCheckCircle,
+  shieldCheck: FiShield,
+  lock: FiLock,
+  creditCard: FiCreditCard,
+};
+
+/**
+ * Grid of short transparency assurances shown below the donation
+ * methods section.
+ *
+ * @param {{ transparency: import("../../../data/transparencyData").transparencyData }} props
+ */
+export default function Transparency({ transparency }) {
+  if (!transparency?.items?.length) return null;
 
   return (
     <section
-      ref={ref}
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-white"
       id="transparency"
+      aria-labelledby="transparency-heading"
+      className="bg-[#F8FAFC] px-5 py-16 sm:px-8 lg:px-12"
     >
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="space-y-12"
-        >
-          <motion.div variants={fadeInUp} className="text-center space-y-4">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">
-              {data.title}
-            </h2>
-            <p className="text-[#0F172A]/70 max-w-2xl mx-auto">
-              {data.description}
-            </p>
-          </motion.div>
+      <div className="mx-auto max-w-7xl">
+        <p className="text-sm font-semibold uppercase tracking-wide text-[#1F6F5F]">
+          {transparency.eyebrow}
+        </p>
+        <h2 id="transparency-heading" className="mt-2 max-w-2xl text-3xl font-bold text-[#0F172A] sm:text-4xl">
+          {transparency.heading}
+        </h2>
 
-          <motion.div
-            variants={fadeInUp}
-            className="grid grid-cols-2 md:grid-cols-3 gap-6"
-          >
-            {data.items.map((item, index) => (
-              <div
-                key={index}
-                className="bg-[#F8FAFC] rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 border border-[#1F6F5F]/5 hover:-translate-y-1"
+        <motion.ul
+          variants={staggerContainer()}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6"
+        >
+          {transparency.items.map((item) => {
+            const Icon = ICONS[item.icon] ?? FiShieldCheck;
+            return (
+              <motion.li
+                key={item.id}
+                variants={staggerItem}
+                className="flex flex-col items-center gap-3 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm"
               >
-                <div className="text-4xl mb-3">{item.icon}</div>
-                <h3 className="font-semibold text-[#0F172A] text-sm sm:text-base">
-                  {item.title}
-                </h3>
-                <p className="text-xs text-[#0F172A]/60 mt-1">{item.status}</p>
-              </div>
-            ))}
-          </motion.div>
-        </motion.div>
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#1F6F5F]/10 text-[#1F6F5F]">
+                  <Icon aria-hidden="true" className="h-5 w-5" />
+                </span>
+                <p className="text-sm font-semibold text-[#0F172A]">{item.title}</p>
+              </motion.li>
+            );
+          })}
+        </motion.ul>
       </div>
     </section>
   );
-};
-
-export default Transparency;
+}

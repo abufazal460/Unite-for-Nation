@@ -1,80 +1,104 @@
-// components/section/donate/Hero.jsx
-import React, { useEffect, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import HeroQR from './HeroQR';
-import HeroButtons from './HeroButtons';
-import { fadeInUp, staggerContainer } from './animations';
+import { motion } from "framer-motion";
+import { FiShield  } from "react-icons/fi";
+import { MdOutlineVerified , MdOutlineBalance  } from "react-icons/md";
+import {  GiGavel } from "react-icons/gi";
+import HeroButtons from "./HeroButtons";
+import HeroQR from "./HeroQR";
+import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "./animations";
 
-const Hero = ({ data }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
+const BADGE_ICONS = {
+  shield: FiShield,
+  badgeCheck: MdOutlineVerified,
+  scale: MdOutlineBalance,
+  gavel: GiGavel,
+};
+
+/**
+ * Top-of-page hero: heading + copy + CTAs on the light panel, a dark
+ * panel with the donation QR on larger screens.
+ *
+ * @param {{ hero: import("../../../data/heroData").heroData }} props
+ */
+export default function Hero({ hero }) {
+  if (!hero) return null;
 
   return (
-    <section
-      ref={ref}
-      className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-[#F8FAFC] overflow-hidden"
-    >
-      {/* Background decoration */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[#1F6F5F]/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-[#D4AF37]/5 rounded-full blur-3xl" />
-      </div>
-
-      <div className="max-w-7xl mx-auto w-full">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"
-        >
-          {/* Left Content */}
-          <motion.div variants={fadeInUp} className="space-y-8">
-            <motion.h1
-              variants={fadeInUp}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
-            >
-              <span className="text-[#1F6F5F]">{data.title.highlight}</span>{' '}
-              <span className="text-[#0F172A]">{data.title.text}</span>
-            </motion.h1>
-
-            <motion.p
-              variants={fadeInUp}
-              className="text-base sm:text-lg text-[#0F172A]/70 leading-relaxed max-w-lg"
-            >
-              {data.description}
-            </motion.p>
-
-            <motion.div variants={fadeInUp}>
-              <HeroButtons data={data.buttons} />
-            </motion.div>
-
-            {/* Trust indicators */}
-            <motion.div
-              variants={fadeInUp}
-              className="flex flex-wrap gap-4 sm:gap-6 pt-4"
-            >
-              {data.trustIndicators.map((item, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <span className="text-[#1F6F5F] text-lg">✓</span>
-                  <span className="text-xs sm:text-sm text-[#0F172A]/70">
-                    {item}
-                  </span>
-                </div>
-              ))}
-            </motion.div>
-          </motion.div>
-
-          {/* Right QR Section */}
-          <motion.div
-            variants={fadeInUp}
-            className="flex justify-center lg:justify-end"
+    <section aria-labelledby="donate-hero-heading" className="relative overflow-hidden bg-[#F8FAFC]">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-[minmax(0,1fr)_420px]">
+        <div className="flex flex-col justify-center gap-6 px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
+          <motion.h1
+            id="donate-hero-heading"
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="text-4xl font-bold leading-tight tracking-tight text-[#0F172A] sm:text-5xl"
           >
-            <HeroQR data={data.qr} />
+            {hero.headingLines.map((line, index) => (
+              <span key={line} className="block">
+                {index === hero.headingLines.length - 1 ? (
+                  <span className="text-[#1F6F5F]">{line}</span>
+                ) : (
+                  line
+                )}
+              </span>
+            ))}
+          </motion.h1>
+
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.1 }}
+            className="max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg"
+          >
+            {hero.description}
+          </motion.p>
+
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.2 }}
+          >
+            <HeroButtons buttons={hero.buttons} />
           </motion.div>
-        </motion.div>
+
+          <motion.ul
+            variants={staggerContainer(0.08, 0.3)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            className="mt-2 flex flex-wrap gap-x-6 gap-y-3"
+            aria-label="Trust indicators"
+          >
+            {hero.trustBadges.map((badge) => {
+              const Icon = BADGE_ICONS[badge.icon] ?? FiShield;
+              return (
+                <motion.li
+                  key={badge.id}
+                  variants={staggerItem}
+                  className="flex items-center gap-2 text-sm text-slate-600"
+                >
+                  <Icon aria-hidden="true" className="h-4 w-4 text-[#1F6F5F]" />
+                  <span>{badge.label}</span>
+                </motion.li>
+              );
+            })}
+          </motion.ul>
+        </div>
+
+        <div className="relative flex items-center justify-center bg-gradient-to-br from-[#0F172A] to-[#134E4A] px-6 py-16 sm:py-20 lg:py-0">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-[#D4AF37]/10 blur-3xl"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-20 -left-10 h-64 w-64 rounded-full bg-[#1F6F5F]/30 blur-3xl"
+          />
+          <HeroQR qr={hero.qr} />
+        </div>
       </div>
     </section>
   );
-};
-
-export default Hero;
+}

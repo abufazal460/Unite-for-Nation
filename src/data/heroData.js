@@ -1,26 +1,45 @@
-// data/heroData.js
+/**
+ * Content for the Donate page hero. Nothing here is hardcoded into
+ * components — Hero.jsx, HeroButtons.jsx and HeroQR.jsx only render
+ * what this file provides.
+ */
 export const heroData = {
-  title: {
-    highlight: 'Stand With Justice.',
-    text: 'Support Victims of False Accusations.',
-  },
+  headingLines: ["Stand With Justice.", "Support Survivors of", "Wrongful Accusations."],
   description:
-    'Your contribution helps innocent individuals receive legal assistance, emergency bail support, legal documentation, and human rights protection. Every donation directly strengthens our mission to fight injustice.',
-  buttons: {
-    donate: { text: 'Donate Now', target: 'donate' },
-    learn: { text: 'Learn More', target: 'faq' },
-  },
-  trustIndicators: [
-    'Secure Donation',
-    'Involved NGO',
-    'Transparent Use of Funds',
-    'Human Rights Protection',
-    'Secure Payment',
+    "Your contribution helps wrongly accused individuals access legal representation, emergency bail support, case documentation and human rights protection — every rupee directly strengthens our fight against injustice.",
+  buttons: [
+    {
+      id: "donate-now",
+      label: "Donate Now",
+      variant: "primary",
+      targetId: "donation-amount",
+      ariaLabel: "Jump to donation amount options",
+    },
+    {
+      id: "learn-more",
+      label: "Learn More",
+      variant: "secondary",
+      targetId: "impact",
+      ariaLabel: "Learn more about why your support matters",
+    },
+  ],
+  trustBadges: [
+    { id: "secure-donation", icon: "shield", label: "Secure Donation" },
+    { id: "verified-ngo", icon: "badgeCheck", label: "Verified NGO" },
+    { id: "transparent-funds", icon: "scale", label: "Transparent Use of Funds" },
+    { id: "human-rights", icon: "gavel", label: "Human Rights Protection" },
   ],
   qr: {
-    image: 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=donate@ngo.org',
-    title: 'Scan to Donate',
-    subtitle: 'UPI: donate@ngo',
-    instruction: 'Scan with any UPI app to donate securely',
+    image: "https://api.dicebear.com/9.x/pixel-art/svg?seed=unit-of-nation-donate",
+    imageAlt: "QR code linking to the secure donation checkout",
+    caption: "Scan to Donate",
+    paymentIcons: [
+      { id: "upi", icon: "upi", label: "UPI" },
+      { id: "paytm", icon: "paytm", label: "Paytm" },
+      { id: "gpay", icon: "gpay", label: "Google Pay" },
+      { id: "phonepe", icon: "phonepe", label: "PhonePe" },
+      { id: "cards", icon: "card", label: "Debit / Credit Card" },
+    ],
+    secureLabel: "Secure Payment Guaranteed",
   },
 };

@@ -1,13 +1,16 @@
-// data/transparencyData.js
+/**
+ * Content for the transparency assurances grid rendered by
+ * Transparency.jsx.
+ */
 export const transparencyData = {
-  title: 'Transparency & Accountability',
-  description: 'We believe in complete transparency. Here\'s how we ensure your donation makes the maximum impact.',
+  eyebrow: "Transparency",
+  heading: "You Always Know Where Your Money Goes",
   items: [
-    { icon: '📊', title: 'Donation Accessible', status: 'Available' },
-    { icon: '📈', title: 'Transparent Financial Reporting', status: 'Updated Monthly' },
-    { icon: '📋', title: 'Case Support Updates', status: 'Real-time' },
-    { icon: '✅', title: 'Verified NGO Registration', status: 'Active' },
-    { icon: '🔒', title: 'Privacy Protected', status: 'GDPR Compliant' },
-    { icon: '💳', title: 'Secure Payment', status: 'SSL Encrypted' },
+    { id: "receipt", icon: "fileText", title: "Donation Receipt Available" },
+    { id: "reporting", icon: "briefcase", title: "Transparent Financial Reporting" },
+    { id: "case-updates", icon: "checkCircle", title: "Case Support Updates" },
+    { id: "ngo-registration", icon: "shieldCheck", title: "Verified NGO Registration" },
+    { id: "privacy", icon: "lock", title: "Privacy Protected" },
+    { id: "secure-processing", icon: "creditCard", title: "Secure Payment Processing" },
   ],
 };

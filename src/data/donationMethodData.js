@@ -1,40 +1,30 @@
-// data/donationMethodData.js
+/**
+ * Content for the "Donation Methods" section rendered by
+ * DonationMethod.jsx. Each bank detail row declares whether it should
+ * render a CopyButton via `copyable`.
+ */
 export const donationMethodData = {
-  title: 'Choose Your Donation Method',
-  description: 'Select from multiple secure payment options to support our cause.',
-  methods: [
-    { id: 'upi', icon: '📱', label: 'UPI' },
-    { id: 'bank', icon: '🏦', label: 'Bank Transfer' },
-    { id: 'card', icon: '💳', label: 'Card' },
-  ],
+  eyebrow: "Donation Methods",
+  heading: "Scan, Transfer or Bank In — Whatever Works for You",
+  qr: {
+    image: "https://api.dicebear.com/9.x/pixel-art/svg?seed=unit-of-nation-bank-transfer",
+    imageAlt: "QR code for direct bank transfer donations",
+    downloadFileName: "unit-of-nation-donation-qr.png",
+    downloadLabel: "Download QR",
+  },
   upi: {
-    qrImage: 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=donate@ngo&pn=NGO&am=0&cu=INR',
-    fields: [
-      { label: 'UPI ID', value: 'donate@ngo', copyable: true },
-      { label: 'Account Holder', value: 'United for Human Rights Foundation', copyable: false },
-      { label: 'Account Number', value: '1234567890002456', copyable: true },
-      { label: 'IFSC', value: 'SBIN0012234', copyable: true },
-      { label: 'Bank Name', value: 'State Bank of India', copyable: false },
-      { label: 'Branch', value: 'Jamia Nagar', copyable: false },
-    ],
+    label: "UPI",
+    id: "unitofnation@upi",
   },
   bank: {
-    title: 'Bank Transfer Details',
+    label: "Bank Information",
     fields: [
-      { label: 'Account Holder', value: 'United for Human Rights Foundation', copyable: false },
-      { label: 'Account Number', value: '1234567890002456', copyable: true },
-      { label: 'IFSC Code', value: 'SBIN0012234', copyable: true },
-      { label: 'Bank Name', value: 'State Bank of India', copyable: false },
-      { label: 'Branch', value: 'Jamia Nagar', copyable: false },
-      { label: 'Account Type', value: 'Current', copyable: false },
-    ],
-  },
-  card: {
-    fields: [
-      { label: 'Card Number', type: 'text', placeholder: '1234 5678 9012 3456' },
-      { label: 'Card Holder', type: 'text', placeholder: 'John Doe' },
-      { label: 'Expiry Date', type: 'text', placeholder: 'MM/YY' },
-      { label: 'CVV', type: 'password', placeholder: '***' },
+      { id: "account-holder", label: "Account Holder Name", value: "Unit for Nation Human Rights Foundation", copyable: true },
+      { id: "account-number", label: "Account Number", value: "1234567890002456", copyable: true },
+      { id: "ifsc", label: "IFSC", value: "SBIN0012234", copyable: true },
+      { id: "bank-name", label: "Bank Name", value: "State Bank of India", copyable: true },
+      { id: "branch", label: "Branch", value: "Jamia Nagar", copyable: false },
+      { id: "account-type", label: "Account Type", value: "Current", copyable: false },
     ],
   },
 };
