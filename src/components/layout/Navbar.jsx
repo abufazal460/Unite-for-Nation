@@ -50,14 +50,14 @@ export function Navbar({ currentPath = "/" }) {
             <span className="block text-2xl sm:text-2xl font-heading font-extrabold text-slate-900 tracking-tight group-hover:text-red-700 transition-colors">
               {site.name}
             </span>
-            <span className="block text-xs text-slate-600 font-mono tracking-wider uppercase font-semibold">
+            <span className="block text-xs text-slate-600 font-mono tracking-wide uppercase font-semibold">
              A Human Rights Organization
             </span>
           </div>
         </a>
 
         {/* Desktop Navigation Menu - Strictly 4 Links */}
-        <nav className="hidden md:flex items-center gap-2 sm:gap-3">
+        <nav className="hidden lg:flex items-center gap-2 sm:gap-3">
           {navigation.items.map((item) => {
             const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
             return (
@@ -78,7 +78,7 @@ export function Navbar({ currentPath = "/" }) {
         </nav>
 
         {/* Action Button: WhatsApp Direct Redirect */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-3">
           <Button
             variant="whatsapp"
             size="sm"
@@ -90,7 +90,7 @@ export function Navbar({ currentPath = "/" }) {
         {/* Mobile Toggle Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden w-9 h-9 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center hover:bg-slate-200 transition-colors cursor-pointer"
+          className="lg:hidden w-9 h-9 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center hover:bg-slate-200 transition-colors cursor-pointer"
           aria-label="Toggle Navigation Menu"
         >
           {mobileMenuOpen ? <FiX className="w-5 h-5" /> : <FiMenu className="w-5 h-5" />}
@@ -99,7 +99,7 @@ export function Navbar({ currentPath = "/" }) {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3 shadow-lg animate-fadeIn">
+        <div className="lg:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3 shadow-lg animate-fadeIn">
           <div className="space-y-1">
             {navigation.items.map((item) => {
               const isActive = currentPath === item.href;
