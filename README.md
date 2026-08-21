@@ -8,8 +8,10 @@
 
 <p>
   <a href="https://unite-for-nation.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/Live%20Demo-Vercel-B91C1C?style=for-the-badge&logo=vercel&logoColor=white&labelColor=1E293B" alt="Live Demo on Vercel" /></a>
-  <a href="http://unitefornation.com/" target="_blank"><img src="https://img.shields.io/badge/Visit-unitefornation.com-B91C1C?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=1E293B" alt="Visit unitefornation.com" target="_blank"/></a>
-  <a href="https://github.com/abufazal460/Unite-for-Nation"><img src="https://img.shields.io/badge/GitHub-Repository-B91C1C?style=for-the-badge&logo=github&logoColor=white&labelColor=1E293B" alt="GitHub Repository" /></a>
+
+  <a href="http://unitefornation.com/" target="_blank"><img src="https://img.shields.io/badge/Visit-unitefornation.com-B91C1C?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=1E293B" alt="Visit unitefornation.com"/></a>
+
+  <a href="https://github.com/abufazal460/Unite-for-Nation" target="_blank"><img src="https://img.shields.io/badge/GitHub-Repository-B91C1C?style=for-the-badge&logo=github&logoColor=white&labelColor=1E293B" alt="GitHub Repository" /></a>
 </p>
 
 <p>
