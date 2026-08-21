@@ -34,13 +34,21 @@
 <td width="50%">
 
 **🏠 Home**
+<<<<<<< HEAD
 ![Unite For Nation Homepage](./src/assets/readme/home.png)
+=======
+![Unite For Nation Homepage](./screenshots/home.png)
+>>>>>>> 3f04194be913b8f462e49db1f2828a5c28096cf5
 
 </td>
 <td width="50%">
 
 **💝 Donate**
+<<<<<<< HEAD
 ![Unite For Nation Donate Page](./src/assets/readme/donate.png)
+=======
+![Unite For Nation Donate Page](./screenshots/donate.png)
+>>>>>>> 3f04194be913b8f462e49db1f2828a5c28096cf5
 
 </td>
 </tr>
@@ -48,13 +56,21 @@
 <td width="50%">
 
 **ℹ️ About**
+<<<<<<< HEAD
 ![Unite For Nation About Page](./src/assets/readme/about.png)
+=======
+![Unite For Nation About Page](./screenshots/about.png)
+>>>>>>> 3f04194be913b8f462e49db1f2828a5c28096cf5
 
 </td>
 <td width="50%">
 
 **🖼️ Gallery**
+<<<<<<< HEAD
 ![Unite For Nation Gallery Page](./src/assets/readme/gallery.png)
+=======
+![Unite For Nation Gallery Page](./screenshots/gallery.png)
+>>>>>>> 3f04194be913b8f462e49db1f2828a5c28096cf5
 
 </td>
 </tr>
