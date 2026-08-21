@@ -140,8 +140,10 @@ Built **mobile-first**, since most visitors reaching the WhatsApp helpline or do
 - npm
 
 **☁️ Hosting & Deployment**
-- Vercel (app hosting/deployment) — [unite-for-nation.vercel.app](https://unite-for-nation.vercel.app/)
-- Custom domain — [unitefornation.com](http://unitefornation.com/)
+
+- Vercel (app hosting/deployment) — <a href="https://unite-for-nation.vercel.app/" target="_blank" rel="noopener noreferrer">unite-for-nation.vercel.app</a>
+
+- Custom domain — <a href="https://unitefornation.com/" target="_blank" rel="noopener noreferrer">unitefornation.com</a>
 
 ---
 
