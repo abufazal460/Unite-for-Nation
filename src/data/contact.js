@@ -11,7 +11,8 @@ export const contact = {
     { id: "e2", label: "Media & Case Verification", address: "info@Uniteofnation.org" }
   ],
   officeAddress: {
-    building: "Unite For Nation Human Rights Trust Building",
+    building: "Unite For Nation",
+    org: "A Human Rights Organization",
     street: "A-29 Batla House Chowk Jamia Nagar Okhla",  
     city: "New Delhi",
     state: "Delhi",

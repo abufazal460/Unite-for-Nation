@@ -123,7 +123,7 @@ export function ContactDetailsSection() {
               <h3 className="text-xl font-heading font-bold text-slate-900">Secretariat Office</h3>
             </div>
             <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-body">
-              {contact.officeAddress.building}, {contact.officeAddress.street}, {contact.officeAddress.city}, {contact.officeAddress.state} - {contact.officeAddress.pincode}
+              {contact.officeAddress.building}, <br /> {contact.officeAddress.org}, <br /> {contact.officeAddress.street}, {contact.officeAddress.city}, {contact.officeAddress.state} - {contact.officeAddress.pincode}
             </p>
             <div className="pt-2 flex items-center gap-2 text-xs font-mono text-slate-600 bg-slate-100 p-2.5 rounded-lg border border-slate-200">
               <FiClock className="w-4 h-4 text-slate-500 shrink-0" />
