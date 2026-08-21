@@ -152,103 +152,34 @@ Built **mobile-first**, since most visitors reaching the WhatsApp helpline or do
 > ⭐ = key file worth knowing first
 
 ```
-abufazal460-unite-for-nation/
-├── README.md
-├── eslint.config.js              ⭐ ESLint flat config
+unite-for-nation/
 ├── index.html                    ⭐ App HTML entry + deep SEO meta tags
 ├── package.json                  ⭐ Dependencies & scripts
 ├── vite.config.js                ⭐ Vite build config
 └── src/
     ├── App.jsx                   ⭐ Root component + custom pushState router
-    ├── index.css                 ⭐ Global styles, fonts, scrollbar, animations
     ├── main.jsx                  ⭐ React entry point
+    ├── index.css                 ⭐ Global styles, fonts, animations
     ├── components/
-    │   ├── common/
-    │   │   ├── Button.jsx        ⭐ Shared button (incl. WhatsApp variant)
-    │   │   ├── Container.jsx
-    │   │   ├── Icon.jsx
-    │   │   └── SectionTitle.jsx
-    │   ├── layout/
-    │   │   ├── Footer.jsx
-    │   │   ├── MainLayout.jsx    ⭐ App shell (Navbar + Lenis + Footer)
-    │   │   └── Navbar.jsx        ⭐ Site navigation + WhatsApp CTA
+    │   ├── common/                # Button, Container, Icon, SectionTitle
+    │   ├── layout/                # Navbar, Footer, MainLayout (+ Lenis)
     │   ├── sections/
     │   │   ├── about/
-    │   │   │   ├── FounderSection.jsx
-    │   │   │   ├── HistorySection.jsx
-    │   │   │   └── WhoWeAreSection.jsx
     │   │   ├── contact/
-    │   │   │   ├── ContactDetailsSection.jsx
-    │   │   │   └── MapSection.jsx
-    │   │   ├── donate/            ⭐ Full donation-flow module
-    │   │   │   ├── animations.js  ⭐ Shared Framer Motion variants + scroll utils
-    │   │   │   ├── BankDetails.jsx
-    │   │   │   ├── CounterCard.jsx    ⭐ Animated count-up impact stat
-    │   │   │   ├── CTA.jsx
-    │   │   │   ├── Donate.jsx
-    │   │   │   ├── DonationAmount.jsx ⭐ Tiered giving + progress rings
-    │   │   │   ├── DonationMethod.jsx ⭐ QR / UPI / bank transfer
-    │   │   │   ├── FAQ.jsx
-    │   │   │   ├── Hero.jsx       ⭐ Donate page hero
-    │   │   │   ├── HeroButtons.jsx
-    │   │   │   ├── HeroQR.jsx
-    │   │   │   ├── Impact.jsx
-    │   │   │   ├── Testimonials.jsx
-    │   │   │   ├── Transparency.jsx
-    │   │   │   ├── TrustCards.jsx
-    │   │   │   └── Verification.jsx   ⭐ Certificate gallery (12A/80G/NGO)
-    │   │   └── home/
-    │   │       ├── AchievementSection.jsx
-    │   │       ├── CallToActionSection.jsx
-    │   │       ├── CertificatesSection.jsx
-    │   │       ├── GallerySection.jsx
-    │   │       ├── HeroSection.jsx    ⭐ Homepage hero
-    │   │       ├── MediaCoverageSection.jsx
-    │   │       ├── MissionSection.jsx
-    │   │       ├── ProblemStatementSection.jsx
-    │   │       └── WorkProcessSection.jsx  ⭐ 5-step legal process
-    │   └── ui/
-    │       ├── Accordion.jsx      ⭐ FAQ accordion
-    │       ├── Badge.jsx
-    │       ├── Card.jsx
-    │       ├── CopyButton.jsx     ⭐ One-tap copy for bank/UPI details
-    │       └── Modal.jsx          ⭐ Gallery/certificate lightbox
-    ├── data/                      ⭐ All site content — zero hardcoding
-    │   ├── about.js
-    │   ├── achievements.js
-    │   ├── buttons.js
+    │   │   ├── donate/            ⭐ full donation-flow module (amount tiers, QR/UPI/bank, impact, verification...)
+    │   │   └── home/              # hero, mission, achievements, gallery, media coverage...
+    │   └── ui/                    # Accordion, Badge, Card, CopyButton, Modal
+    ├── data/                      ⭐ all site content — zero hardcoding
+    │   ├── site.js, seo.js, navigation.js
     │   ├── certificates.js        ⭐ 12A / 80G / ISO / NGO Darpan details
-    │   ├── contact.js
-    │   ├── donationAmountData.js  ⭐ Giving tiers
-    │   ├── donationMethodData.js  ⭐ QR / UPI / bank content
-    │   ├── faqData.js
-    │   ├── footer.js
-    │   ├── founder.js
-    │   ├── gallery.js
-    │   ├── galleryCategories.js
-    │   ├── hero.js
-    │   ├── heroData.js            ⭐ Donate hero content
-    │   ├── impactData.js          ⭐ Impact counters
-    │   ├── mediaCoverage.js
-    │   ├── mission.js
-    │   ├── navigation.js          ⭐ Nav links (incl. Donate Us)
-    │   ├── problemStatement.js
-    │   ├── seo.js
-    │   ├── site.js                ⭐ Org name, WhatsApp link, email, address
-    │   ├── socialLinks.js
-    │   ├── statistics.js
-    │   ├── testimonialData.js
-    │   ├── timeline.js            ⭐ 5-step process content
-    │   ├── transparencyData.js
-    │   ├── trustData.js
-    │   ├── verificationData.js
-    │   └── vision.js
-    └── pages/                     ⭐ Route-level page components
+    │   ├── donationAmountData.js, donationMethodData.js
+    │   └── ...(about, gallery, testimonials, timeline, impact, etc.)
+    └── pages/                     ⭐ route-level page components
+        ├── Home.jsx
         ├── About.jsx
-        ├── Contact.jsx
-        ├── Donate.jsx             ⭐ Donation page composition
+        ├── Donate.jsx             ⭐ donation page composition
         ├── Gallery.jsx
-        ├── Home.jsx               ⭐ Homepage entry
+        ├── Contact.jsx
         └── NotFound.jsx
 ```
 
