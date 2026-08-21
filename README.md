@@ -149,7 +149,6 @@ Built **mobile-first**, since most visitors reaching the WhatsApp helpline or do
 
 ## 📂 Project Structure
 
-> ⭐ = key file worth knowing first
 
 ```
 unite-for-nation/
