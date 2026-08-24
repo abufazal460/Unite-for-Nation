@@ -16,7 +16,7 @@ export function MissionSection() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          {mission.cards.slice(0, 3).map((card) => (
+          {mission.cards.map((card) => (
             <Card key={card.id} className="p-6 sm:p-8 space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-red-50 text-red-700 border border-red-200 flex items-center justify-center font-bold">
                 <Icon name={card.icon} className="w-6 h-6" />

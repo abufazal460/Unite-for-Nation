@@ -26,6 +26,18 @@ export const mission = {
       icon: "FiUsers",
       title: "Rehabilitation & Family Support",
       description: "Providing counseling, social dignity restoration, and emergency assistance to families suffering emotional and financial distress."
+    },
+    {
+      id: "m-5",
+      icon: "FiScale",
+      title: "Policy Reform & Judicial Accountability",
+      description: "Advocating for legal and procedural reforms that reduce wrongful prosecutions, prevent misuse of criminal law, and promote greater accountability within the justice system."
+    },
+    {
+     id: "m-6",
+     icon: "FiHeart",
+     title: "Victim Rights & Social Advocacy",
+     description: "Amplifying the voices of victims of injustice through public awareness campaigns, community advocacy, and sustained support for dignity, equality, and fundamental rights."
     }
   ]
 };
