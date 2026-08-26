@@ -19,11 +19,11 @@ export const donationMethodData = {
   bank: {
     label: "Bank Information",
     fields: [
-      { id: "account-holder", label: "Account Holder Name", value: "Unit for Nation Human Rights Foundation", copyable: true },
-      { id: "account-number", label: "Account Number", value: "1234567890002456", copyable: true },
-      { id: "ifsc", label: "IFSC", value: "SBIN0012234", copyable: true },
-      { id: "bank-name", label: "Bank Name", value: "State Bank of India", copyable: true },
-      { id: "branch", label: "Branch", value: "Jamia Nagar", copyable: false },
+      { id: "account-holder", label: "Account Holder Name", value: "Unit for Nation", copyable: true },
+      { id: "account-number", label: "Account Number", value: "584502010016897", copyable: true },
+      { id: "ifsc", label: "IFSC", value: "UBIN0558451", copyable: true },
+      { id: "bank-name", label: "Bank Name", value: "Union Bank of india", copyable: true },
+      { id: "branch", label: "Branch", value: "Jamia Nagar Okhla Delhi", copyable: false },
       { id: "account-type", label: "Account Type", value: "Current", copyable: false },
     ],
   },
