@@ -12,7 +12,7 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-700 text-sm sm:text-base font-mono font-bold">
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#2A9D8F]/10 border border-[#2A9D8F] text-[#2A9D8F] text-sm sm:text-base font-mono font-bold">
               <FiShield className="w-4 h-4" />
               <span>Registered Human Rights NGO</span>
             </div>

@@ -34,7 +34,7 @@ export function Navbar({ currentPath = "/" }) {
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-200 ${
         isScrolled
           ? "bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs py-3"
-          : "bg-white border-b border-slate-100 py-4"
+          : "bg-white border-b border-slate-100 py-3"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -43,11 +43,11 @@ export function Navbar({ currentPath = "/" }) {
           <img
             src={site.logoUrl}
             alt="Unite For Nation Logo"
-            className="w-16 h-16 sm:w-16 sm:h-18 shadow-xs group-hover:scale-105 transition-transform"
+            className="w-10 h-11 sm:w-13 sm:h-14 shadow-xs group-hover:scale-105 transition-transform"
             referrerPolicy="no-referrer"
           />
           <div>
-            <span className="block text-2xl sm:text-2xl font-heading font-extrabold text-slate-900 tracking-tight group-hover:text-red-700 transition-colors">
+            <span className="block text-2xl sm:text-2xl font-heading font-extrabold text-slate-900 tracking-tight group-hover:text-[#283618] transition-colors">
               {site.name}
             </span>
             <span className="block text-xs text-slate-600 font-mono tracking-wide uppercase font-semibold">
@@ -67,7 +67,7 @@ export function Navbar({ currentPath = "/" }) {
                 onClick={(e) => handleNavClick(e, item)}
                 className={`px-4 py-2.5 text-base sm:text-lg font-bold rounded-xl transition-colors ${
                   isActive
-                    ? "text-red-700 bg-red-50 font-extrabold"
+                    ? "text-white bg-[#283618] font-extrabold"
                     : "text-slate-700 hover:text-slate-950 hover:bg-slate-100"
                 }`}
               >

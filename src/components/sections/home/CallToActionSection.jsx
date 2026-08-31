@@ -8,7 +8,7 @@ export function CallToActionSection() {
     <section className="py-14 sm:py-20 bg-[#faf8f5] border-t border-slate-200/80">
       <Container>
         <div className="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm text-center space-y-6 max-w-4xl mx-auto">
-          <div className="w-14 h-14 rounded-2xl bg-red-50 text-red-700 border border-red-200 flex items-center justify-center font-bold mx-auto">
+          <div className="w-14 h-14 rounded-2xl bg-[#2A9D8F]/10 text-[#2A9D8F] border  border-[#2A9D8F] flex items-center justify-center font-bold mx-auto">
             <FiShield className="w-7 h-7" />
           </div>
 
