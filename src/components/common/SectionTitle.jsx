@@ -12,7 +12,7 @@ export function SectionTitle({
   return (
     <div className={`space-y-3 mb-10 sm:mb-14 max-w-4xl ${align === "center" ? "mx-auto" : ""} ${alignClass} ${className}`}>
       {subtitle && (
-        <span className="inline-block text-xs sm:text-sm font-bold tracking-widest text-red-700 uppercase font-mono">
+        <span className="inline-block text-xs sm:text-sm font-bold tracking-widest text-[#2A9D8F] uppercase font-mono">
           {subtitle}
         </span>
       )}

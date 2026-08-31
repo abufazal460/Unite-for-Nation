@@ -19,7 +19,7 @@ export function WorkProcessSection() {
           {timeline.map((step) => (
             <Card key={step.id} className="p-5 sm:p-6 space-y-3">
               <div className="flex items-center justify-between">
-                <span className="w-9 h-9 rounded-xl bg-red-700 text-white font-mono font-extrabold text-sm flex items-center justify-center">
+                <span className="w-9 h-9 rounded-xl bg-[#2A9D8F]/10 text-[#2A9D8F] border border-[#2A9D8F] font-mono font-extrabold text-sm flex items-center justify-center">
                   {step.stepNumber}
                 </span>
                 <span className="text-xs font-mono font-bold text-slate-500 uppercase">

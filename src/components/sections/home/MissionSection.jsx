@@ -18,7 +18,7 @@ export function MissionSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {mission.cards.map((card) => (
             <Card key={card.id} className="p-6 sm:p-8 space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-red-50 text-red-700 border border-red-200 flex items-center justify-center font-bold">
+              <div className="w-12 h-12 rounded-2xl bg-[#2A9D8F]/10 text-[#2A9D8F] border border-[#2A9D8F] flex items-center justify-center font-bold">
                 <Icon name={card.icon} className="w-6 h-6" />
               </div>
               <h3 className="text-xl sm:text-2xl font-heading font-extrabold text-slate-900">
