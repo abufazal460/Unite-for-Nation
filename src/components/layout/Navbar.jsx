@@ -90,7 +90,7 @@ export function Navbar({ currentPath = "/" }) {
         {/* Mobile Toggle Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden w-9 h-9 rounded-lg bg-slate-10 text-slate-700 flex items-center justify-center hover:bg-slate-200 transition-colors cursor-pointer"
+          className="lg:hidden w-9 h-9 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center hover:bg-slate-200 transition-colors cursor-pointer"
           aria-label="Toggle Navigation Menu"
         >
           {mobileMenuOpen ? <FiX className="w-5 h-5" /> : <FiMenu className="w-5 h-5" />}
