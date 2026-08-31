@@ -63,7 +63,7 @@ export function Footer() {
                 <h3 className="text-lg sm:text-xl font-heading font-bold text-slate-900">
                   {site.name}
                 </h3>
-                <p className="text-xs text-red-700 font-mono font-bold uppercase tracking-wider">
+                <p className="text-xs text-[#2A9D8F] font-mono font-bold uppercase tracking-wider">
                  A Human Rights Organization
                 </p>
               </div>
@@ -102,7 +102,7 @@ export function Footer() {
                 <li key={idx}>
                   <a
                     href={link.href}
-                    className="text-slate-700 hover:text-red-700 font-medium transition-colors"
+                    className="text-slate-700 hover:text-[#2A9D8F] font-medium transition-colors"
                   >
                     {link.label}
                   </a>
