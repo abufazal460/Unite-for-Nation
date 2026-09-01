@@ -94,19 +94,20 @@ export function ContactDetailsSection() {
 
           {/* Email Card */}
           <Card className="p-6 sm:p-8 space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-red-50 text-red-700 border border-red-200 flex items-center justify-center font-bold">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-600 text-white border border-emerald-200/90 flex items-center justify-center font-bold">
               <FiMail className="w-6 h-6" />
             </div>
             <div className="space-y-1">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-red-700">Official Correspondence</span>
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-800 ">Official Correspondence</span>
               <h3 className="text-xl font-heading font-bold text-slate-900">Email Secretariat</h3>
             </div>
             <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-body">
               Send formal documents, case details, and official legal queries directly to our email.
             </p>
+            <br />
             <a
               href={`mailto:${site.email}`}
-              className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-base transition-colors"
+              className="inline-flex items-center justify-center gap-2 w-full py-4 px-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-base transition-colors"
             >
               <FiMail className="w-5 h-5" />
               <span>{site.email}</span>
@@ -115,18 +116,18 @@ export function ContactDetailsSection() {
 
           {/* Address Card */}
           <Card className="p-6 sm:p-8 space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 border border-amber-200 flex items-center justify-center font-bold">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-600 text-white border border-[#DADCE0] flex items-center justify-center font-bold">
               <FiMapPin className="w-6 h-6" />
             </div>
             <div className="space-y-1">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-amber-800">Head Office</span>
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-800">Head Office</span>
               <h3 className="text-xl font-heading font-bold text-slate-900">Secretariat Office</h3>
             </div>
             <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-body">
               {contact.officeAddress.building}, <br /> {contact.officeAddress.org}, <br /> {contact.officeAddress.street}, {contact.officeAddress.city}, {contact.officeAddress.state} - {contact.officeAddress.pincode}
             </p>
-            <div className="pt-2 flex items-center gap-2 text-xs font-mono text-slate-600 bg-slate-100 p-2.5 rounded-lg border border-slate-200">
-              <FiClock className="w-4 h-4 text-slate-500 shrink-0" />
+            <div className="pt-2 flex items-center gap-2 text-xs font-mono text-[#2A9D8F] bg-[#2A9D8F]/10 p-2.5 rounded-lg border border-[#2A9D8F]">
+              <FiClock className="w-4 h-4 text-[#2A9D8F] shrink-0" />
               <span>All day: 10:00 AM - 8:00 PM</span>
             </div>
           </Card>
@@ -160,7 +161,7 @@ export function ContactDetailsSection() {
                       <IconComp className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="text-base sm:text-lg font-heading font-bold text-slate-900 group-hover:text-red-700 transition-colors">
+                      <h4 className="text-base sm:text-lg font-heading font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
                         {social.name}
                       </h4>
                       <p className="text-xs sm:text-sm text-slate-500 font-mono">

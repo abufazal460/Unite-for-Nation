@@ -5,14 +5,14 @@ export function Badge({
   children,
   text,
   icon,
-  variant = "red",
+  variant = "[#2A9D8F] ",
   size = "md",
   className = ""
 }) {
   const content = text || children;
 
   const variantStyles = {
-    red: "bg-red-50 text-red-700 border-red-200",
+    red: "bg-[#2A9D8F]/10 text-[#2A9D8F] border-[#2A9D8F]",
     amber: "bg-amber-50 text-amber-800 border-amber-200",
     emerald: "bg-emerald-50 text-emerald-800 border-emerald-200",
     neutral: "bg-slate-100 text-slate-700 border-slate-200"
