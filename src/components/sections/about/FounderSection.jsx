@@ -26,9 +26,9 @@ export function FounderSection() {
               <div className="p-4 bg-white border-t border-slate-100 flex items-center justify-between">
                 <div>
                   <h4 className="text-sm font-heading font-bold text-slate-900">{founder.name}</h4>
-                  <span className="text-xs text-red-700 font-mono">{founder.role}</span>
+                  <span className="text-xs text-[#2A9D8F] font-mono">{founder.role}</span>
                 </div>
-                <Badge variant="amber">Founder</Badge>
+                <Badge variant="[#2A9D8F]">Founder</Badge>
               </div>
             </div>
           </div>
@@ -39,11 +39,11 @@ export function FounderSection() {
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-body">{founder.bio}</p>
             </div>
 
-            <div className="p-6 bg-amber-50/70 border border-amber-200 rounded-2xl space-y-2">
+            <div className="p-6 bg-[#2A9D8F]/10 border border-[#2A9D8F] rounded-2xl space-y-2">
               <p className="text-base sm:text-lg font-serif italic text-amber-950 leading-relaxed">
                 "{founder.quote}"
               </p>
-              <span className="block text-right text-xs sm:text-sm font-mono text-amber-900 font-bold">— {founder.name}</span>
+              <span className="block text-right text-xs sm:text-sm font-mono text-[#2A9D8F] font-bold">— {founder.name}</span>
             </div>
           </div>
         </div>

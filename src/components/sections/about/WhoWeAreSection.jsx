@@ -29,7 +29,7 @@ export function WhoWeAreSection() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {about.coreValues.map((val, idx) => (
                 <Card key={idx} className="p-5 space-y-2">
-                  <div className="flex items-center gap-2 text-red-700 font-bold text-sm font-mono uppercase">
+                  <div className="flex items-center gap-2 text-[#2A9D8F] font-bold text-sm font-mono uppercase">
                     <FiCheck className="w-5 h-5 text-emerald-600 shrink-0" />
                     <span>{val.title}</span>
                   </div>

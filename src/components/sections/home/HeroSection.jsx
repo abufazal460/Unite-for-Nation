@@ -19,7 +19,7 @@ export function HeroSection() {
 
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl font-heading font-extrabold text-slate-900 tracking-tight leading-tight">
               Protecting Innocents From{" "}
-              <span className="text-red-700">False Accusations</span> & Unjust Imprisonment
+              <span className="text-[#2A9D8F]">False Accusations</span> & Unjust Imprisonment
             </h1>
 
             <p className="text-base sm:text-xl md:text-2xl text-slate-700 leading-relaxed font-body max-w-2xl mx-auto lg:mx-0">

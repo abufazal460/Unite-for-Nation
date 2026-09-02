@@ -37,7 +37,7 @@ export default function CTA({ cta }) {
           type="button"
           aria-label={cta.button.ariaLabel ?? cta.button.label}
           onClick={() => scrollToId(cta.button.targetId)}
-          className="mt-8 inline-flex items-center justify-center rounded-full bg-[#D4AF37] px-8 py-3 text-sm font-semibold text-[#0F172A] transition-colors duration-200 hover:bg-[#c49f2f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-[#12343b] transition-colors duration-200 hover:bg-teal-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           {cta.button.label}
         </button>

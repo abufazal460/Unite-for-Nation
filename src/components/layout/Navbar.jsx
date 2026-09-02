@@ -47,7 +47,7 @@ export function Navbar({ currentPath = "/" }) {
             referrerPolicy="no-referrer"
           />
           <div>
-            <span className="block text-2xl sm:text-2xl font-heading font-extrabold text-slate-900 tracking-tight group-hover:text-[#283618] transition-colors">
+            <span className="block text-2xl sm:text-2xl font-heading font-extrabold text-slate-900 tracking-tight group-hover:text-[#2A9D8F] transition-colors">
               {site.name}
             </span>
             <span className="block text-xs text-slate-600 font-mono tracking-wide uppercase font-semibold">
@@ -67,7 +67,7 @@ export function Navbar({ currentPath = "/" }) {
                 onClick={(e) => handleNavClick(e, item)}
                 className={`px-4 py-2.5 text-base sm:text-lg font-bold rounded-xl transition-colors ${
                   isActive
-                    ? "text-white bg-[#283618] font-extrabold"
+                    ? "text-white bg-black font-extrabold"
                     : "text-slate-700 hover:text-slate-950 hover:bg-slate-100"
                 }`}
               >
