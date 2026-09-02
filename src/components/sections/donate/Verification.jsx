@@ -51,7 +51,7 @@ export default function Verification({ verification }) {
                 />
               </div>
               <div className="flex items-start gap-3 border-t border-[#D4AF37]/30 p-5">
-                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#D4AF37]/15 text-[#B8912B]">
+                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#2A9D8F]/10 text-[#2A9D8F]">
                   <MdOutlineVerified aria-hidden="true" className="h-5 w-5" />
                 </span>
                 <div className="min-w-0">
