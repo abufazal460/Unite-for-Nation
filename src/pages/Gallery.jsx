@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import Container from '../components/common/Container';
 import SectionTitle from '../components/common/SectionTitle';
@@ -9,6 +9,46 @@ import { FiMaximize2 } from 'react-icons/fi';
 
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
+
+  // Shuffle gallery order whenever the Gallery page mounts.
+  const shuffledGallery = useMemo(() => {
+    return [...gallery].sort(() => Math.random() - 0.5);
+  }, []);
+
+  // Lock background page scroll while modal is open.
+  useEffect(() => {
+    if (!selectedImage) return;
+
+    const body = document.body;
+    const html = document.documentElement;
+
+    // Save the current scroll position and existing styles.
+    const scrollY = window.scrollY;
+    const originalBodyOverflow = body.style.overflow;
+    const originalBodyPosition = body.style.position;
+    const originalBodyTop = body.style.top;
+    const originalBodyWidth = body.style.width;
+    const originalHtmlOverflow = html.style.overflow;
+
+    // Prevent background scrolling.
+    html.style.overflow = 'hidden';
+    body.style.overflow = 'hidden';
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}px`;
+    body.style.width = '100%';
+
+    return () => {
+      // Restore all original styles.
+      html.style.overflow = originalHtmlOverflow;
+      body.style.overflow = originalBodyOverflow;
+      body.style.position = originalBodyPosition;
+      body.style.top = originalBodyTop;
+      body.style.width = originalBodyWidth;
+
+      // Restore the exact previous scroll position.
+      window.scrollTo(0, scrollY);
+    };
+  }, [selectedImage]);
 
   return (
     <MainLayout currentPath="/gallery">
@@ -21,7 +61,7 @@ export function Gallery() {
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {gallery.map((item) => (
+            {shuffledGallery.map((item) => (
               <Card
                 key={item.id}
                 onClick={() => setSelectedImage(item)}
@@ -36,17 +76,12 @@ export function Gallery() {
                     decoding="async"
                     className="w-full h-full object-contain ..."
                   />
+
                   <div className="absolute inset-0 bg-slate-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <div className="bg-white/90 text-slate-800 p-2.5 rounded-full shadow-md">
                       <FiMaximize2 className="w-4 h-4 text-red-700" />
                     </div>
                   </div>
-                </div>
-                <div className="p-5 space-y-2">
-
-                  <h3 className="text-base sm:text-lg font-body font-bold text-slate-900 line-clamp-1">
-                    {item.title}
-                  </h3>
                 </div>
               </Card>
             ))}
@@ -56,7 +91,6 @@ export function Gallery() {
         <Modal
           isOpen={Boolean(selectedImage)}
           onClose={() => setSelectedImage(null)}
-          title={selectedImage?.title || "Gallery Image"}
         >
           {selectedImage && (
             <div className="space-y-4">
@@ -68,13 +102,6 @@ export function Gallery() {
                   referrerPolicy="no-referrer"
                   decoding="async"
                 />
-              </div>
-              <div className="p-3 bg-slate-50 rounded-xl space-y-2 text-xs">
-                <div className="border-b border-slate-200 pb-2">
-                  <h4 className="text-sm font-body font-semibold text-slate-900">{selectedImage.title}</h4>
-
-                </div>
-                <p className="text-slate-600 leading-relaxed">{selectedImage.description}</p>
               </div>
             </div>
           )}

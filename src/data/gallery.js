@@ -1,95 +1,87 @@
-import achievement1 from "../assets/gallery/achievements/achievements 1.webp";
-import achievement2 from "../assets/gallery/achievements/achievements 2.webp";
-import achievement3 from "../assets/gallery/achievements/achievements 3.webp";
-
-import news1 from "../assets/gallery/News/news paper 1.webp";
-import news2 from "../assets/gallery/News/news paper 2.webp";
-import news3 from "../assets/gallery/News/news paper 3.webp";
-import news4 from "../assets/gallery/News/news paper 4.webp";
-
-import work1 from "../assets/gallery/works/work 1.webp";
-import work2 from "../assets/gallery/works/work 2.webp";
-import work3 from "../assets/gallery/works/work 3.webp";
+import img1 from "../assets/gallery/1.webp";
+import img2 from "../assets/gallery/2.webp";
+import img3 from "../assets/gallery/3.webp";
+import img4 from "../assets/gallery/4.webp";
+import img5 from "../assets/gallery/5.webp";
+import img6 from "../assets/gallery/6.webp";
+import img7 from "../assets/gallery/7.webp";
+import img8 from "../assets/gallery/8.webp";
+import img9 from "../assets/gallery/9.webp";
+import img10 from "../assets/gallery/10.webp";
+import img11 from "../assets/gallery/11.webp";
+import img12 from "../assets/gallery/12.webp";
+import img13 from "../assets/gallery/13.webp";
+import img14 from "../assets/gallery/14.webp";
 
 export const gallery = [
   {
     id: "gal-1",
-    title: "Recognition & Achievement Ceremony",
-    description:
-      "Official recognition received for continuous efforts in supporting justice, legal awareness, and human rights initiatives.",
-    image: achievement1,
+    image: img1,
     featured: true,
   },
   {
     id: "gal-2",
-    title: "Human Rights Recognition",
-    description:
-      "Receiving appreciation for dedicated work in protecting innocent people and promoting legal awareness.",
-    image: achievement2,
+    image: img2,
     featured: true,
   },
   {
     id: "gal-3",
-    title: "Certificate of Appreciation",
-    description:
-      "Honored for outstanding contribution toward justice, legal support, and community welfare.",
-    image: achievement3,
+    image: img3,
     featured: true,
   },
   {
     id: "gal-4",
-    title: "Newspaper Coverage",
-    description:
-      "Media coverage highlighting important legal awareness campaigns and successful support initiatives.",
-    image: news1,
+    image: img4,
     featured: false,
   },
   {
     id: "gal-5",
-    title: "Press Recognition",
-    description:
-      "Featured in newspapers for raising awareness against false criminal cases and protecting human rights.",
-    image: news2,
+    image: img5,
     featured: true,
   },
   {
     id: "gal-6",
-    title: "Media Spotlight",
-    description:
-      "Coverage showcasing the organization's commitment to justice and legal assistance.",
-    image: news3,
+    image: img6,
     featured: false,
   },
   {
     id: "gal-7",
-    title: "Featured News Article",
-    description:
-      "News publication recognizing ongoing efforts to support innocent individuals and their families.",
-    image: news4,
+    image: img7,
     featured: false,
   },
   {
     id: "gal-8",
-    title: "Community Legal Awareness Program",
-    description:
-      "Organizing legal awareness activities to educate citizens about their constitutional rights and legal procedures.",
-    image: work1,
+    image: img8,
     featured: true,
   },
   {
     id: "gal-9",
-    title: "Public Awareness Campaign",
-    description:
-      "Conducting outreach programs focused on justice, legal rights, and support for victims of false accusations.",
-    image: work2,
+    image: img9,
     featured: false,
   },
   {
     id: "gal-10",
-    title: "Field Support Activity",
-    description:
-      "Working directly with communities to provide guidance, legal awareness, and social support.",
-    image: work3,
+    image: img10,
     featured: true,
+  },
+  {
+    id: "gal-11",
+    image: img11,
+    featured: false,
+  },
+  {
+    id: "gal-12",
+    image: img12,
+    featured: false,
+  },
+  {
+    id: "gal-13",
+    image: img13,
+    featured: true,
+  },
+  {
+    id: "gal-14",
+    image: img14,
+    featured: false,
   },
 ];
