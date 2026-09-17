@@ -1,5 +1,5 @@
 export const footer = {
-  aboutText: "Unite For Nation is a registered public charitable trust dedicated to defending innocents against false criminal charges, ensuring legal literacy, and restoring human rights.",
+  aboutText: "Unite For Nation is a registered organisation dedicated to defending individuals against false criminal charges, promoting legal literacy, and protecting and restoring human rights     .",
   quickLinks: [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },

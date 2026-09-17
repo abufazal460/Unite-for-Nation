@@ -58,26 +58,24 @@ export function HeroSection() {
 
   return (
     <section aria-label="Unite For Nation highlights" className="w-full overflow-hidden">
-      <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] bg-slate-200">
-        <div
-          className={`flex h-full ${
-            isReducedMotion ? '' : 'transition-transform duration-700 ease-in-out'
+      <div className="relative w-full h-[calc(100dvh-80px)] bg-slate-200">        <div
+        className={`flex h-full ${isReducedMotion ? '' : 'transition-transform duration-700 ease-in-out'
           }`}
-          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-        >
-          {images.map((image, index) => (
-            <img
-              key={image.id}
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-full flex-shrink-0 object-fit object-center"
-              loading={index === 0 ? 'eager' : 'lazy'}
-              decoding="async"
-              fetchPriority={index === 0 ? 'high' : 'auto'}
-              referrerPolicy="no-referrer"
-            />
-          ))}
-        </div>
+        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+      >
+        {images.map((image, index) => (
+          <img
+            key={image.id}
+            src={image.src}
+            alt={image.alt}
+            className="w-full h-full flex-shrink-0 object-fit object-center"
+            loading={index === 0 ? 'eager' : 'lazy'}
+            decoding="async"
+            fetchPriority={index === 0 ? 'high' : 'auto'}
+            referrerPolicy="no-referrer"
+          />
+        ))}
+      </div>
       </div>
     </section>
   );
