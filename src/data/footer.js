@@ -7,7 +7,7 @@ export const footer = {
     { label: "Contact Us", href: "/contact" },
     { label: "Donate Us", href: "/donate" },
   ],
-  copyright: "© 2026 Unite For Nation Human Rights Foundation. All Rights Reserved.",
+  copyright: "© 2026 Unite For Nation  All Rights Reserved.",
   developer: {
     title: "Designed & Developed by",
     name: "Abu Fazal",

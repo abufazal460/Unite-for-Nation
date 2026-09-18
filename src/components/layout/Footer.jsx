@@ -41,7 +41,7 @@ export function Footer() {
       url: "https://www.youtube.com/channel/UCBEFl7KofquOu8biYK_YMrQ",
       color: "hover:text-red-600 hover:bg-red-50",
     },
-    
+
   ];
 
   return (
@@ -56,7 +56,7 @@ export function Footer() {
                   {site.name}
                 </h3>
                 <p className="text-xs text-[#2A9D8F] font-mono font-bold uppercase tracking-wider">
-                 A Human Rights Organization
+                  A Human Rights Organization
                 </p>
               </div>
             </div>
@@ -123,6 +123,15 @@ export function Footer() {
               >
                 <FiMail className="w-5 h-5 text-slate-500 shrink-0" />
                 <span>{site.email}</span>
+
+              </a>
+              <a
+                href={`mailto:${site.hostingerMail}`}
+                className="flex items-center gap-2.5 text-slate-700 hover:text-slate-900"
+              >
+                <FiMail className="w-5 h-5 text-slate-500 shrink-0" />
+
+                <span>{site.hostingerMail}</span>
               </a>
               <div className="flex items-start gap-2.5">
                 <FiMapPin className="w-5 h-5 text-slate-500 shrink-0 mt-0.5" />

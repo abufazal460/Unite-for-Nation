@@ -83,7 +83,7 @@ export function HeroSection() {
               <img
                 src={image.mobileSrc}
                 alt={image.alt}
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-fit object-center"
                 loading={index === 0 ? 'eager' : 'lazy'}
                 decoding="async"
                 fetchPriority={index === 0 ? 'high' : 'auto'}
