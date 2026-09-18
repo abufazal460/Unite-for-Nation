@@ -1,9 +1,8 @@
-import qrCode from "../assets/QR/band-qr-code.jpeg"
 export const donationMethodData = {
   eyebrow: "Donation Methods",
   heading: "Scan, Transfer or Bank In — Whatever Works for You",
   qr: {
-    image: qrCode,
+    image: "bank-qr-code.jpeg",
     imageAlt: "QR code for direct bank transfer donations",
     downloadFileName: "unit-of-nation-donation-qr.png",
     downloadLabel: "Download QR",

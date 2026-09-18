@@ -1,5 +1,3 @@
-import qrcode from "../assets/QR/band-qr-code.jpeg"
-
 export const heroData = {
   headingLines: ["Stand With Justice.", "Support Survivors of", "Wrongful Accusations."],
   description:
@@ -27,7 +25,7 @@ export const heroData = {
     { id: "human-rights", icon: "gavel", label: "Human Rights Protection" },
   ],
   qr: {
-    image: qrcode,
+    image: "bank-qr-code.jpeg",
     imageAlt: "QR code linking to the secure donation checkout",
     caption: "Scan to Donate",
     paymentIcons: [
