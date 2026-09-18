@@ -1,4 +1,3 @@
-import React from 'react';
 import Container from '../../common/Container';
 import Button from '../../common/Button';
 import { FiShield } from 'react-icons/fi';

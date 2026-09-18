@@ -1,4 +1,3 @@
-import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import WhoWeAreSection from '../components/sections/about/WhoWeAreSection';
 import FounderSection from '../components/sections/about/FounderSection';

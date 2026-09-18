@@ -1,4 +1,3 @@
-import React from 'react';
 import { site } from '../../data/site';
 import { FaWhatsapp } from 'react-icons/fa6';
 import Icon from './Icon';

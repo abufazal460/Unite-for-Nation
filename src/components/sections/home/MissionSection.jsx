@@ -1,4 +1,3 @@
-import React from 'react';
 import { mission } from '../../../data/mission';
 import Container from '../../common/Container';
 import SectionTitle from '../../common/SectionTitle';

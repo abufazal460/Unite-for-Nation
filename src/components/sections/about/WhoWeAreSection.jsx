@@ -1,4 +1,3 @@
-import React from 'react';
 import { about } from '../../../data/about';
 import Container from '../../common/Container';
 import SectionTitle from '../../common/SectionTitle';

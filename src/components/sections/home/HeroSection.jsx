@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { hero } from '../../../data/hero';
 
 const AUTO_ADVANCE_MS = 3000;

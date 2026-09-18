@@ -1,9 +1,3 @@
-/**
- * Shared Framer Motion variants + scroll utilities for the Donate page.
- * Keeping these centralized avoids re-declaring the same easing/timing
- * curves in every section component.
- */
-
 export const EASE = [0.22, 1, 0.36, 1];
 
 /** Fade + rise, used for generic content blocks and headings. */
@@ -75,11 +69,6 @@ export const ringDraw = (circumference, progress) => ({
 
 export const viewportOnce = { once: true, amount: 0.3 };
 
-/**
- * Smoothly scrolls to a section by id. Prefers a Lenis instance exposed
- * globally by the app shell (window.lenis) so the motion matches the
- * rest of the site's smooth-scroll feel; falls back to native scroll.
- */
 export function scrollToId(id, offset = -80) {
   if (typeof window === "undefined") return;
   const target = document.getElementById(id);

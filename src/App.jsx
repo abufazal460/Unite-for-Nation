@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy, Suspense, startTransition } from 'react';
+import { useState, useEffect, lazy, Suspense, startTransition } from 'react';
 import {
   HomeSkeleton,
   AboutSkeleton,

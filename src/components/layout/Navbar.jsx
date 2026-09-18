@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { navigation } from '../../data/navigation';
 import { site } from '../../data/site';
 import Button from '../common/Button';

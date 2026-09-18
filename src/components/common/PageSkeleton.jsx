@@ -1,10 +1,3 @@
-// src/components/common/PageSkeletons.jsx
-//
-// One skeleton component per route, shaped to match that page's real
-// layout (same section order, same rough proportions) so the swap to
-// real content feels like a continuation, not a jump. Pure Tailwind
-// `animate-pulse` + divs — no new package needed.
-
 function Bar({ className = "" }) {
   return <div className={`animate-pulse rounded-md bg-slate-200 ${className}`} />;
 }

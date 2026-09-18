@@ -1,4 +1,3 @@
-import React from 'react';
 import { contact } from '../../../data/contact';
 import { site } from '../../../data/site';
 import Container from '../../common/Container';

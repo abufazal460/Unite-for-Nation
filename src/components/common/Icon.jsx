@@ -1,4 +1,3 @@
-import React from 'react';
 import * as FiIcons from 'react-icons/fi';
 import * as FaIcons from 'react-icons/fa6';
 import * as HiIcons from 'react-icons/hi2';

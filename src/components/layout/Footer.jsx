@@ -1,4 +1,3 @@
-import React from "react";
 import { footer } from "../../data/footer";
 import { site } from "../../data/site";
 import {
