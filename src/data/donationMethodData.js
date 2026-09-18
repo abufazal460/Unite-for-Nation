@@ -1,13 +1,9 @@
-/**
- * Content for the "Donation Methods" section rendered by
- * DonationMethod.jsx. Each bank detail row declares whether it should
- * render a CopyButton via `copyable`.
- */
+import qrCode from "../assets/QR/band-qr-code.jpeg"
 export const donationMethodData = {
   eyebrow: "Donation Methods",
   heading: "Scan, Transfer or Bank In — Whatever Works for You",
   qr: {
-    image: "https://api.dicebear.com/9.x/pixel-art/svg?seed=unit-of-nation-bank-transfer",
+    image: qrCode,
     imageAlt: "QR code for direct bank transfer donations",
     downloadFileName: "unit-of-nation-donation-qr.png",
     downloadLabel: "Download QR",

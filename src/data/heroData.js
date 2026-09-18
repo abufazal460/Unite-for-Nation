@@ -1,8 +1,5 @@
-/**
- * Content for the Donate page hero. Nothing here is hardcoded into
- * components — Hero.jsx, HeroButtons.jsx and HeroQR.jsx only render
- * what this file provides.
- */
+import qrcode from "../assets/QR/band-qr-code.jpeg"
+
 export const heroData = {
   headingLines: ["Stand With Justice.", "Support Survivors of", "Wrongful Accusations."],
   description:
@@ -30,7 +27,7 @@ export const heroData = {
     { id: "human-rights", icon: "gavel", label: "Human Rights Protection" },
   ],
   qr: {
-    image: "https://api.dicebear.com/9.x/pixel-art/svg?seed=unit-of-nation-donate",
+    image: qrcode,
     imageAlt: "QR code linking to the secure donation checkout",
     caption: "Scan to Donate",
     paymentIcons: [

@@ -12,12 +12,7 @@ const PAYMENT_ICONS = {
   card: PiCreditCardBold,
 };
 
-/**
- * Glass QR card shown inside the dark hero panel. Scales in from 0 on
- * first mount to draw the eye immediately.
- *
- * @param {{ qr: import("../../../data/heroData").heroData["qr"] }} props
- */
+
 export default function HeroQR({ qr }) {
   if (!qr) return null;
 
