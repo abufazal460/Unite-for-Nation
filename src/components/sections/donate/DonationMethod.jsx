@@ -3,10 +3,6 @@ import { FiDownload } from "react-icons/fi";
 import CopyButton from "../../ui/CopyButton";
 import { fadeUp, scaleIn, viewportOnce } from "./animations";
 
-/**
- * Handles the QR "Download QR" action by triggering a browser download
- * of the QR image via a temporary anchor element.
- */
 function downloadQr(image, fileName) {
   const link = document.createElement("a");
   link.href = image;
@@ -16,13 +12,6 @@ function downloadQr(image, fileName) {
   document.body.removeChild(link);
 }
 
-/**
- * Donation Methods section: a glass card holding a downloadable QR on
- * one side and UPI / bank transfer details (with copy-to-clipboard)
- * on the other.
- *
- * @param {{ donationMethod: import("../../../data/donationMethodData").donationMethodData }} props
- */
 export default function DonationMethod({ donationMethod }) {
   if (!donationMethod) return null;
 

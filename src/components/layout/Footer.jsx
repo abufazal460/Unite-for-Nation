@@ -134,10 +134,7 @@ export function Footer() {
         </div>
 
         {/* Disclaimer & Copyright */}
-        <div className="pt-8 border-t border-slate-200 text-center space-y-3">
-          <p className="text-xs sm:text-sm text-slate-600 max-w-4xl mx-auto italic">
-            {footer.legalDisclaimer}
-          </p>
+        <div className="pt-4 border-t border-slate-200 text-center space-y-3">
           <p className="text-xs sm:text-sm font-mono text-slate-500 font-medium">
             {footer.copyright}
           </p>
