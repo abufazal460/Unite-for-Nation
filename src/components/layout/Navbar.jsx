@@ -6,7 +6,7 @@ import { FiMenu, FiX } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa6';
 
 export function Navbar({ currentPath = "/" }) {
-  const [isScrolled, setIsScrolled] = useState(false);
+const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -15,17 +15,7 @@ export function Navbar({ currentPath = "/" }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (e, item) => {
-    setMobileMenuOpen(false);
-    if (item.href.startsWith('/')) {
-      // Standard page navigation
-      if (window.location.pathname !== item.href) {
-        window.history.pushState({}, '', item.href);
-        window.dispatchEvent(new Event('popstate'));
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    }
-  };
+  const handleNavClick = () => setMobileMenuOpen(false);
 
   return (
     <header

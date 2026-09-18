@@ -23,7 +23,7 @@ export function ContactDetailsSection() {
     {
       id: "facebook",
       name: "Facebook Page",
-      handle: "@UniteOfNation",
+      handle: "@UniteForNation",
       icon: FaFacebook,
       color: "text-blue-600 bg-blue-50 border-blue-200 hover:bg-blue-100",
       btnColor: "bg-blue-600 hover:bg-blue-700 text-white",
@@ -43,7 +43,7 @@ export function ContactDetailsSection() {
     {
       id: "X",
       name: "Unite4NationOrg",
-      handle: "@UniteOfNation",
+      handle: "@UniteForNation",
       icon: FaXTwitter,
       color: "text-slate-900 bg-slate-100 border-slate-300 hover:bg-slate-200",
       btnColor: "bg-slate-900 hover:bg-slate-800 text-white",
