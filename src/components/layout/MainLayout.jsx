@@ -12,10 +12,10 @@ export function MainLayout({ children, currentPath = "/" }) {
     }
   }, [currentPath]);
   // same MainLayout effect as canonical fix
-useEffect(() => {
-  const ogUrl = document.querySelector('meta[property="og:url"]');
-  if (ogUrl) ogUrl.setAttribute("content", `https://unitefornation.com${currentPath}`);
-}, [currentPath]);
+  useEffect(() => {
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", `https://unitefornation.com${currentPath}`);
+  }, [currentPath]);
 
   useEffect(() => {
     const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
@@ -37,8 +37,7 @@ useEffect(() => {
       <Navbar currentPath={currentPath} />
 
       {/* Main Page Content */}
-      <main className="flex-grow pt-16 sm:pt-20">
-        {children}
+      <main className="flex-grow" style={{ paddingTop: 'var(--nav-h)' }}>        {children}
       </main>
 
       {/* Persistent Footer */}

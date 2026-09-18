@@ -48,3 +48,8 @@
 .animate-fadeIn {
   animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+:root { --nav-h: 4rem; }      /* 64px, matches pt-16 */
+@media (min-width: 640px) {
+  :root { --nav-h: 5rem; }    /* 80px, matches sm:pt-20 */
+}

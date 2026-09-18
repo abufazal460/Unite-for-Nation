@@ -42,7 +42,7 @@ export function Navbar({ currentPath = "/" }) {
             alt="Unite For Nation Logo"
             width="44"
             height="48"
-            className="w-13 h-10 sm:w-19 sm:h-13"
+            className="h-9 w-auto sm:h-11 lg:h-12 xl:h-14"
           />
           <div>
             <span className="block text-2xl sm:text-2xl font-heading font-extrabold text-slate-900 tracking-tight group-hover:text-[#2A9D8F] transition-colors">
