@@ -1,5 +1,5 @@
-import heroImg1 from "../assets/works/work1.jpeg";
-import heroImg2 from "../assets/works/work2.png"; // confirm this is your real 2nd asset path
+import heroImg1 from "../assets/works/work2.png"; 
+import heroImg2 from "../assets/works/work1.jpeg";
 
 export const hero = {
   images: [
