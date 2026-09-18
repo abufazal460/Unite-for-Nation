@@ -1,7 +1,7 @@
 export const heroData = {
   headingLines: ["Stand With Justice.", "Support Survivors of", "Wrongful Accusations."],
   description:
-    "Your contribution helps wrongly accused individuals access legal representation, emergency bail support, case documentation and human rights protection — every rupee directly strengthens our fight against injustice.",
+    "Your contribution helps wrongly accused individuals access legal representation, emergency bail support, case documentation and human rights protection every rupee directly strengthens our fight against injustice.",
   buttons: [
     {
       id: "donate",
@@ -25,7 +25,7 @@ export const heroData = {
     { id: "human-rights", icon: "gavel", label: "Human Rights Protection" },
   ],
   qr: {
-    image: "bank-qr-code.jpeg",
+    image: "qr code.jpeg",
     imageAlt: "QR code linking to the secure donation checkout",
     caption: "Scan to Donate",
     paymentIcons: [

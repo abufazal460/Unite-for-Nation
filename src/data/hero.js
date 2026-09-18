@@ -5,8 +5,8 @@ import heroDesktop2 from "../assets/works/work2.jpeg";
 // Mobile (tall / portrait-crop) sources — used for phones & tablets
 // in both portrait and landscape orientation (breakpoint-based switch,
 // not orientation-based, so rotating the phone doesn't swap images).
-import heroMobile1 from "../assets/works/work1.png";
-import heroMobile2 from "../assets/works/work2.jpeg";
+import heroMobile1 from "../assets/works/workMobile1.png";
+import heroMobile2 from "../assets/works/workMobile2.png";
 
 export const hero = {
   // Breakpoint at which the desktop image takes over from the mobile

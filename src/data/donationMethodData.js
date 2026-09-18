@@ -2,14 +2,14 @@ export const donationMethodData = {
   eyebrow: "Donation Methods",
   heading: "Scan, Transfer or Bank In — Whatever Works for You",
   qr: {
-    image: "bank-qr-code.jpeg",
+    image: "qr code.jpeg",
     imageAlt: "QR code for direct bank transfer donations",
     downloadFileName: "unit-of-nation-donation-qr.png",
     downloadLabel: "Download QR",
   },
   upi: {
     label: "UPI",
-    id: "unitofnation@upi",
+    id: "qr919452900007-6897@unionbankofindia",
   },
   bank: {
     label: "Bank Information",
