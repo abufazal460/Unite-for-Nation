@@ -69,7 +69,7 @@ export function ContactDetailsSection() {
         <SectionTitle
           subtitle={contact.subtitle}
           title={contact.title}
-          description="Connect directly with our legal secretariat via WhatsApp, Email, or Social Channels."
+          description="Connect directly with our legal secretariat via WhatsApp, Email, or Social Media Channels."
         />
 
         {/* Contact Info Overview Cards */}

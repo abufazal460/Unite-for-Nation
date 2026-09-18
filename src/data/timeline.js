@@ -20,7 +20,7 @@ export const timeline = [
   {
     id: "step-3",
     stepNumber: "03",
-    title: "Pro-Bono Legal Guidance",
+    title: "Legal Guidance",
     subtitle: "Strategic Defense Prep",
     description: "Senior advocates analyze police chargesheets, draft anticipatory or regular bail applications, and prepare legal petitions under High Court jurisdiction.",
     icon: "FiBriefcase",

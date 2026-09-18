@@ -27,7 +27,7 @@ export const statistics = [
     id: "stat-4",
     targetNumber: 1000,
     suffix: "+",
-    title: "Pro-Bono Advocate Partners",
+    title: "Advocate Partners",
     description: "Dedicated panel lawyers standing up against fabricated litigation.",
     icon: "FiShield"
   }

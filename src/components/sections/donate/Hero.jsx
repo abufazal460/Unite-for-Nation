@@ -57,7 +57,9 @@ export default function Hero({ hero }) {
           >
             <HeroButtons buttons={hero.buttons} />
           </motion.div>
-
+          <p className="text-sm font-medium text-red-600 animate-pulse drop-shadow-[0_0_6px_rgba(220,38,38,0.6)]">
+            ⚠️ Donations are allowed only from India. Foreign funding is not accepted.
+          </p>
           <motion.ul
             variants={staggerContainer(0.08, 0.3)}
             initial="hidden"

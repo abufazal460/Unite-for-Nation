@@ -18,7 +18,7 @@ export function WhoWeAreSection() {
           <div className="lg:col-span-7 space-y-6">
             <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
               <Badge variant="red" size="md">
-                Public Charitable Trust
+                Human Rights Organzation 
               </Badge>
               <p className="text-base sm:text-xl text-slate-700 leading-relaxed font-body">
                 {about.whoWeAre}
