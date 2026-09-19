@@ -8,7 +8,7 @@ import img7 from "../assets/gallery/7.webp";
 import img8 from "../assets/gallery/8.webp";
 import img9 from "../assets/gallery/9.webp";
 import img10 from "../assets/gallery/10.webp";
-import img11 from "../assets/gallery/11.webp";
+// import img11 from "../assets/gallery/11.webp";
 import img12 from "../assets/gallery/12.webp";
 import img13 from "../assets/gallery/13.webp";
 import img14 from "../assets/gallery/14.webp";
@@ -64,11 +64,11 @@ export const gallery = [
     image: img10,
     featured: true,
   },
-  {
-    id: "gal-11",
-    image: img11,
-    featured: false,
-  },
+  // {
+  //   id: "gal-11",
+  //   image: img11,
+  //   featured: false,
+  // },
   {
     id: "gal-12",
     image: img12,

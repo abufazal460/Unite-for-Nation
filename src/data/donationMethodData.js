@@ -1,6 +1,6 @@
 export const donationMethodData = {
   eyebrow: "Donation Methods",
-  heading: "Scan, Transfer or Bank In — Whatever Works for You",
+  heading: "Scan, Transfer or Bank In Whatever Works for You",
   qr: {
     image: "qr code.jpeg",
     imageAlt: "QR code for direct bank transfer donations",

@@ -30,7 +30,7 @@ export default function Transparency({ transparency }) {
         <p className="text-sm font-semibold uppercase tracking-wide text-[#1F6F5F]">
           {transparency.eyebrow}
         </p>
-        <h2 id="transparency-heading" className="mt-2 max-w-2xl text-3xl font-bold text-[#0F172A] sm:text-4xl">
+        <h2 id="transparency-heading" className="mt-2 max-w-4xl text-3xl font-bold text-[#0F172A] sm:text-4xl">
           {transparency.heading}
         </h2>
 

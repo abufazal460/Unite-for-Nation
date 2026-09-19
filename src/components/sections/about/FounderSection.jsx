@@ -10,7 +10,7 @@ export function FounderSection() {
       <Container>
         <SectionTitle
           subtitle="LEADERSHIP"
-          title="Founder & Trustee"
+          title="Founder & Chairman"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">

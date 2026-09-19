@@ -33,7 +33,7 @@ export default function DonationMethod({ donationMethod }) {
           <p className="text-sm font-semibold uppercase tracking-wide text-[#1F6F5F]">
             {donationMethod.eyebrow}
           </p>
-          <h2 id="donation-method-heading" className="mt-2 max-w-2xl text-3xl font-bold text-[#0F172A] sm:text-4xl">
+          <h2 id="donation-method-heading" className="mt-2 max-w-5xl text-3xl font-bold text-[#0F172A] sm:text-4xl">
             {donationMethod.heading}
           </h2>
         </motion.div>
