@@ -1,0 +1,35 @@
+Options -MultiViews
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# 1) Force HTTPS + non-www in a single hop
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://unitefornation.com%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.unitefornation\.com$ [NC]
+RewriteRule ^ https://unitefornation.com%{REQUEST_URI} [R=301,L]
+
+# 2) /index.html -> /
+RewriteCond %{THE_REQUEST} \s/index\.html[\s?]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# 3) Trailing slash and .html variants -> clean URL
+RewriteRule ^(about|gallery|contact|donate)/$ /$1 [R=301,L]
+RewriteCond %{THE_REQUEST} \s/(about|gallery|contact|donate)\.html[\s?]
+RewriteRule ^ /%1 [R=301,L]
+
+# 4) Valid routes -> their prerendered HTML (status 200).
+#    Any other unknown path is NOT rewritten, so Apache returns a real 404
+#    and serves /404.html via ErrorDocument.
+RewriteRule ^(about|gallery|contact|donate)$ /$1.html [L]
+</IfModule>
+
+# Error page must never be indexed
+<IfModule mod_headers.c>
+<Files "404.html">
+Header set X-Robots-Tag "noindex, follow"
+</Files>
+</IfModule>
