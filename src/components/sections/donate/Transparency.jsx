@@ -42,7 +42,7 @@ export default function Transparency({ transparency }) {
           className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6"
         >
           {transparency.items.map((item) => {
-            const Icon = ICONS[item.icon] ?? FiShieldCheck;
+            const Icon = ICONS[item.icon] ?? FiShield;
             return (
               <motion.li
                 key={item.id}

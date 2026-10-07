@@ -12,6 +12,7 @@ export function WhoWeAreSection() {
         <SectionTitle
           subtitle={about.subtitle}
           title={about.title}
+          as="h1"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">

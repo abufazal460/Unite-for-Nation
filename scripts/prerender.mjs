@@ -31,9 +31,10 @@ function render(seo) {
   html = setMeta(html, "property", "og:description", seo.description);
   html = setMeta(html, "name", "twitter:title", seo.title);
   html = setMeta(html, "name", "twitter:description", seo.description);
+  html = html.replace(/\s*<script type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, "");
   const ld = buildJsonLd(seo);
   if (ld) {
-    html = html.replace("</head>", `  <script type="application/ld+json">${JSON.stringify(ld).replace(/</g, "\\u003c")}</script>\n</head>`);
+    html = html.replace("</head>", `  <script type="application/ld+json" data-seo-jsonld="true">${JSON.stringify(ld).replace(/</g, "\\u003c")}</script>\n</head>`);
   }
   return html;
 }

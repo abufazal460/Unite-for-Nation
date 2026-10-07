@@ -52,9 +52,9 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-3.5">
               <div>
-                <h3 className="text-lg sm:text-xl font-heading font-bold text-slate-900">
+                <p className="text-lg sm:text-xl font-heading font-bold text-slate-900">
                   {site.name}
-                </h3>
+                </p>
                 <p className="text-xs text-[#2A9D8F] font-mono font-bold uppercase tracking-wider">
                   A Human Rights Organization
                 </p>
@@ -86,9 +86,9 @@ export function Footer() {
 
           {/* Quick Links (4 pages) */}
           <div className="space-y-4">
-            <h4 className="text-sm font-heading font-bold text-slate-900 uppercase tracking-wider font-mono">
+            <h3 className="text-sm font-heading font-bold text-slate-900 uppercase tracking-wider font-mono">
               Quick Navigation
-            </h4>
+            </h3>
             <ul className="space-y-2.5 text-base">
               {footer.quickLinks.map((link, idx) => (
                 <li key={idx}>
@@ -105,9 +105,9 @@ export function Footer() {
 
           {/* Contact & Secretariat */}
           <div className="space-y-4">
-            <h4 className="text-sm font-heading font-bold text-slate-900 uppercase tracking-wider font-mono">
+            <h3 className="text-sm font-heading font-bold text-slate-900 uppercase tracking-wider font-mono">
               Secretariat Desk
-            </h4>
+            </h3>
             <div className="space-y-3 text-sm sm:text-base text-slate-700">
               <a
                 href={site.whatsappUrl}

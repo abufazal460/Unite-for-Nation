@@ -3,9 +3,11 @@ export function SectionTitle({
   title,
   description,
   align = "center",
-  className = ""
+  className = "",
+  as = "h2"
 }) {
   const alignClass = align === "left" ? "text-left" : align === "right" ? "text-right" : "text-center";
+  const HeadingTag = as === "h1" ? "h1" : "h2";
 
   return (
     <div className={`space-y-3 mb-10 sm:mb-14 max-w-4xl ${align === "center" ? "mx-auto" : ""} ${alignClass} ${className}`}>
@@ -15,9 +17,9 @@ export function SectionTitle({
         </span>
       )}
       {title && (
-        <h2 className="text-2xl sm:text-4xl md:text-5xl font-body font-extrabold tracking-tight text-slate-900">
+        <HeadingTag className="text-2xl sm:text-4xl md:text-5xl font-body font-extrabold tracking-tight text-slate-900">
           {title}
-        </h2>
+        </HeadingTag>
       )}
       {description && (
         <p className="text-base sm:text-lg md:text-xl text-slate-700 leading-relaxed font-body">

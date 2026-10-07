@@ -7,6 +7,8 @@ import Modal from '../components/ui/Modal';
 import { gallery } from '../data/gallery';
 import { FiMaximize2 } from 'react-icons/fi';
 
+const altFor = (item) => item?.alt || item?.title || "Unite For Nation fieldwork and legal awareness event";
+
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -58,6 +60,7 @@ export function Gallery() {
             subtitle="DOCUMENTATION"
             title="Fieldwork & Event Gallery"
             description="Visual records of legal awareness camps, consultations, and foundation initiatives."
+            as="h1"
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -71,7 +74,7 @@ export function Gallery() {
                   <img
                     src={item.image}
                     sizes="(max-width: 640px) 100vw, 33vw"
-                    alt={item.title}
+                    alt={altFor(item)}
                     loading="lazy"
                     decoding="async"
                     className="w-full h-full object-contain ..."
@@ -97,7 +100,7 @@ export function Gallery() {
               <div className="rounded-xl overflow-hidden hover:bg-slate-100 max-h-[60vh] flex items-center justify-center duration-300">
                 <img
                   src={selectedImage.image}
-                  alt={selectedImage.title}
+                  alt={altFor(selectedImage)}
                   className="w-full h-auto max-h-[60vh] object-contain"
                   referrerPolicy="no-referrer"
                   decoding="async"

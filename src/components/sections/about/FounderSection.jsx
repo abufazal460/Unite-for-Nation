@@ -18,13 +18,13 @@ export function FounderSection() {
             <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-xs bg-slate-50">
               <img
                 src={founder.photo}
-                alt={founder.name}
+                alt={`${founder.name.trim()} - Founder & Chairman of Unite For Nation`}
                 className="w-full aspect-[4/5] object-cover object-top"
                 referrerPolicy="no-referrer"
               />
               <div className="p-4 bg-white border-t border-slate-100 flex items-center justify-between">
                 <div>
-                  <h4 className="text-sm font-heading font-bold text-slate-900">{founder.name}</h4>
+                  <p className="text-sm font-heading font-bold text-slate-900">{founder.name}</p>
                   <span className="text-xs text-[#2A9D8F] font-mono">{founder.role}</span>
                 </div>
                 <Badge variant="[#2A9D8F]">Founder</Badge>

@@ -12,6 +12,7 @@ export function MissionSection() {
           subtitle="OUR CORE PURPOSE"
           title="Mission & Work Pillars"
           description="Dedicated to protecting fundamental rights through investigation support, legal awareness, and court advocacy."
+          as="h1"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">

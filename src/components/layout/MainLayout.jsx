@@ -2,19 +2,12 @@ import { useEffect, useLayoutEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Lenis from 'lenis';
+import { applyClientSeo } from '../../seo/seo';
 
 export function MainLayout({ children, currentPath = "/" }) {
-  // src/components/layout/MainLayout.jsx — central place, runs on every route
+  // Dynamically update document title, canonical, description, robots, OG, and JSON-LD on route transitions
   useEffect(() => {
-    const canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute("href", `https://unitefornation.com${currentPath === "/" ? "/" : currentPath}`);
-    }
-  }, [currentPath]);
-  // same MainLayout effect as canonical fix
-  useEffect(() => {
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) ogUrl.setAttribute("content", `https://unitefornation.com${currentPath}`);
+    applyClientSeo(currentPath);
   }, [currentPath]);
 
   useLayoutEffect(() => {
