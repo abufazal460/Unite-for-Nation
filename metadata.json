@@ -1,8 +1,0 @@
-{
-  "name": "Unite for Nation",
-  "description": "Unite for Nation is a human rights organization providing affordable legal support to people facing false accusations, wrongful criminal cases and injustice across India.",
-  "permissions": [],
-  "capabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
