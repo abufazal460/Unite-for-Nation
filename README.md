@@ -1,14 +1,14 @@
 <div align="center">
 
-# ⚖️ UNITE FOR NATION
+# ⚖️ Unite for Nation
 
-### 🕊️ A Human Rights Organization — Fighting False Accusations & Restoring Justice
+### A Human Rights Organization — Fighting False Accusations & Restoring Justice
 
 <br/>
 
 <p>
-  <a href="https://unite-for-nation.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/Live%20Demo-Vercel-B91C1C?style=for-the-badge&logo=vercel&logoColor=white&labelColor=1E293B" alt="Live Demo on Vercel" /></a>
-  <a href="http://unitefornation.com/" target="_blank"><img src="https://img.shields.io/badge/Visit-unitefornation.com-B91C1C?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=1E293B" alt="Visit unitefornation.com"/></a>
+  <a href="https://unitefornation.com/" target="_blank"><img src="https://img.shields.io/badge/Website-unitefornation.com-B91C1C?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=1E293B" alt="Visit unitefornation.com"/></a>
+  <a href="https://unite-for-nation.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/Mirror-Vercel-B91C1C?style=for-the-badge&logo=vercel&logoColor=white&labelColor=1E293B" alt="Vercel Mirror" /></a>
   <a href="https://github.com/abufazal460/Unite-for-Nation" target="_blank"><img src="https://img.shields.io/badge/GitHub-Repository-B91C1C?style=for-the-badge&logo=github&logoColor=white&labelColor=1E293B" alt="GitHub Repository" /></a>
 </p>
 
@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/badge/React-19-B91C1C?style=flat-square&logo=react&logoColor=white&labelColor=1E293B" alt="React 19" />
   <img src="https://img.shields.io/badge/Vite-6-B91C1C?style=flat-square&logo=vite&logoColor=white&labelColor=1E293B" alt="Vite 6" />
   <img src="https://img.shields.io/badge/Tailwind%20CSS-4-B91C1C?style=flat-square&logo=tailwindcss&logoColor=white&labelColor=1E293B" alt="Tailwind CSS 4" />
-  <img src="https://img.shields.io/badge/Framer%20Motion-B91C1C?style=flat-square&logo=framer&logoColor=white&labelColor=1E293B" alt="Framer Motion" />
+  <img src="https://img.shields.io/badge/Motion-12-B91C1C?style=flat-square&logo=framer&logoColor=white&labelColor=1E293B" alt="Motion" />
 </p>
 
 </div>
@@ -27,34 +27,32 @@
 
 ## 📸 Project Preview
 
-> A quick look at the actual pages — homepage, donation flow, about, and gallery. *(Drop real screenshots into a `screenshots/` folder at the project root with these file names to have them show up here.)*
-
 <table>
 <tr>
 <td width="50%">
 
-**🏠 Home**
-![Unite For Nation Homepage](./src/assets/readme/home.png)
+### 🏠 Home
+![Unite For Nation Homepage Screenshot](./src/assets/readme/home.png)
 
 </td>
 <td width="50%">
 
-**💝 Donate**
-![Unite For Nation Donate Page](./src/assets/readme/donate.png)
+### 💝 Donate
+![Unite For Nation Donate Page Screenshot](./src/assets/readme/donate.png)
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-**ℹ️ About**
-![Unite For Nation About Page](./src/assets/readme/about.png)
+### ℹ️ About
+![Unite For Nation About Page Screenshot](./src/assets/readme/about.png)
 
 </td>
 <td width="50%">
 
-**🖼️ Gallery**
-![Unite For Nation Gallery Page](./src/assets/readme/gallery.png)
+### 🖼️ Gallery
+![Unite For Nation Gallery Page Screenshot](./src/assets/readme/gallery.png)
 
 </td>
 </tr>
@@ -64,198 +62,202 @@
 
 ## 📖 Project Overview
 
-**Unite For Nation** is a registered public charitable trust and **human rights organization** dedicated to defending individuals who are falsely accused, wrongfully implicated in fabricated criminal cases, or trapped in unjust imprisonment across India.
+**Unite for Nation** is a registered human rights organization (Reg. No: `UP/2022/0318038`) based in New Delhi, India. The foundation works to support innocent individuals and underprivileged families who face fabricated criminal charges, false FIRs, and unlawful harassment.
 
-The organization provides **affordable, low-cost legal support** — connecting innocent citizens with pro-bono and low-fee legal representation, independent fact-finding, emergency bail assistance, and public legal literacy camps — specifically aimed at people who cannot afford expensive legal help. Backed by 12A and 80G government registration, NGO Darpan verification, and ISO certification, the trust operates with complete transparency around how every rupee is spent.
+Because legal defense in India is often prohibitively expensive, many falsely accused undertrials spend months or years behind bars without proper representation. Unite for Nation bridges this gap by connecting victims with experienced defense advocates, providing confidential document verification, conducting independent fact-finding, and running community legal awareness camps.
 
-> This repository is the **frontend website** for Unite For Nation — the digital front door where visitors learn about the organization's mission, read verified certificates and media coverage, reach the legal helpline over WhatsApp, and **donate directly** through UPI, bank transfer, or a scannable QR code to fund real legal-aid work.
+This repository contains the official frontend web application. It serves as the primary contact portal for individuals seeking urgent legal guidance, provides field documentation of past initiatives, and enables direct donations via UPI and bank transfer to support legal defense work.
 
 ---
 
 ## ✨ Features
 
-- ⚖️ **Human rights & legal-aid storytelling** — dedicated sections explaining the problem of false accusations, the organization's 5-step legal support process, and its measurable impact
-- 💳 **Full donation flow** — a dedicated `/donate` page with tiered giving amounts, animated progress rings, a downloadable QR code, UPI ID, and complete bank transfer details with one-tap copy buttons
-- 📈 **Animated impact counters** — key statistics (people assisted, legal consultations, emergency bail requests, volunteer lawyers) count up smoothly into view as you scroll
-- 🧾 **Certificate & registration verification** — 12A, 80G, ISO and NGO Darpan certificates are displayed directly on the site so donors can verify legitimacy at a glance
-- 📰 **Media coverage showcase** — newspaper, TV, and magazine features highlighting the organization's court victories and advocacy work
-- 🖼️ **Fieldwork gallery with lightbox** — photos from legal awareness camps, achievement ceremonies, and community outreach, viewable in a fullscreen modal
-- ❓ **FAQ accordion** — common donor questions (security, receipts, monthly giving, NGO verification) answered in a smooth, height-animated accordion
-- 💬 **WhatsApp-first helpline** — a persistent WhatsApp button lets anyone facing a false case get instant, confidential legal guidance in one tap
-- 🌊 **Buttery smooth scrolling** site-wide via Lenis, kept in sync with Framer Motion's scroll-triggered reveals
-- 🗂️ **Zero hardcoded content** — every stat, certificate, testimonial, FAQ, and gallery image is pulled from a dedicated file in `src/data/` and rendered through a map/loop
-- 🔍 **SEO built in, not bolted on** — deep meta tags, keyword targeting, canonical URL, Open Graph tags, and Google site verification aimed at ranking for legal-aid and human-rights search terms
-- 🏗️ **Lightweight custom routing** — client-side navigation handled with a small `pushState`/`popstate` router instead of a routing library, keeping the bundle lean
+- **Lightweight Client-Side Routing**: Custom `pushState`/`popstate` router in `src/App.jsx` avoids external routing dependencies, keeps bundle size lean, and automatically pairs lazy chunks with matching skeleton loaders.
+- **Full Static Prerendering (Technical SEO)**: Dedicated post-build script (`scripts/prerender.mjs`) crawls route definitions and outputs static `.html` files with route-specific `<title>`, `<meta name="description">`, absolute canonical URLs, OpenGraph tags, and Twitter Cards.
+- **Schema.org Structured Data**: Integrated JSON-LD schemas (`NGO`, `WebSite`, `AboutPage`, `ContactPage`, `CollectionPage`, `WebPage`) provide rich snippets for search engines with verified organization details and social links.
+- **Hostinger / Apache Server Optimization**: Production `.htaccess` configuration handles clean URLs, trailing slash redirects (`/about/` → `/about`), direct serving of prerendered HTML (`/about` → `/about.html`), and a real 404 response with `noindex` headers.
+- **Direct Donation System**: Dedicated `/donate` page featuring a downloadable Union Bank of India QR code, direct UPI ID (`qr919452900007-6897@unionbankofindia`), and account transfer details with one-click copy buttons.
+- **Interactive Fieldwork Gallery**: Dynamic image gallery in `src/pages/Gallery.jsx` featuring responsive image loading, descriptive accessibility alt attributes, and a full-size modal lightbox viewer.
+- **24/7 Helpline & Multi-Channel Contact**: Prominent WhatsApp direct chat integration, emergency helpline numbers, verified social media channels, and an embedded Google Maps view of the secretariat office in Jamia Nagar, New Delhi.
+- **Smooth Inertia Scrolling**: Lenis smooth scrolling tuned for desktop viewports, automatically bypassed for touch devices and users with reduced-motion system preferences.
+- **Centralized Data Layer**: Content throughout the site (statistics, navigation, contact details, FAQs, gallery items, founder bio) is organized modularly under `src/data/` for straightforward updates.
 
 ---
 
 ## 📄 Pages
 
-| Page | Route | What's there |
+| Page | Route | Description |
 |---|---|---|
-| **🏠 Home** | `/` | Hero, mission pillars, the 5-step legal-support process, key achievements, and a WhatsApp call-to-action |
-| **ℹ️ About** | `/about` | Who the trust is, its core values, and a profile of the founder, Dr. Qasim Choudhary |
-| **🖼️ Gallery** | `/gallery` | Photos from legal awareness camps, achievement ceremonies, and press coverage |
-| **📞 Contact** | `/contact` | WhatsApp helpline, email, office address, social channels, and an embedded office location map |
-| **💝 Donate** | `/donate` | Hero + QR, trust indicators, impact story with counters, tiered donation amounts, donation methods (UPI/bank/QR), transparency assurances, certificate verification, FAQ, and a final call-to-action |
+| **🏠 Home** | `/` | Hero carousel, core mission pillars, 5-step legal process, impact statistics, and WhatsApp contact banner |
+| **ℹ️ About** | `/about` | Organization mission, historical context, core principles, and leadership profile of founder Dr. Qasim Chaudhary |
+| **🖼️ Gallery** | `/gallery` | Visual documentation of legal aid camps, community consultations, and public awareness events with modal viewer |
+| **📞 Contact** | `/contact` | Emergency helpline, email addresses, New Delhi office address, social channels, and interactive Google Maps embed |
+| **💝 Donate** | `/donate` | Hero banner with trust indicators, downloadable QR code, UPI details, bank account info with copy buttons, and donor FAQs |
+| **🚫 404** | `/404` | Custom not-found screen with home return action, configured with `noindex, follow` robots directives |
 
 ---
 
 ## 🎨 Design & UI
 
-The interface leans into a **trust-first, editorial look**: a warm off-white background (`#faf8f5`), deep slate text, and a confident red accent used sparingly for calls-to-action — evoking seriousness and credibility rather than a typical NGO template.
+The visual design is structured around trust, readability, and authority:
 
-Typography pairs **Poppins** for headings with **Inter** for body copy, loaded via Google Fonts, giving the site a clean, modern, highly legible feel appropriate for legal and official content.
-
-The donation page in particular uses a distinct dark **navy-to-teal gradient** hero panel to visually separate "giving" from the rest of the site, paired with gold accents on certificate cards to signal authenticity and trust. Icons throughout come from `react-icons` (Feather, Font Awesome 6, Heroicons, Lucide), and every interactive element — buttons, accordions, counters, progress rings — is animated with Framer Motion for a polished, non-static feel.
+- **Color Palette**: Warm off-white background (`#faf8f5`), deep slate typography (`#1e293b`), balanced emerald/teal accents (`#2A9D8F`), and an authoritative red primary tone (`#b91c1c`) for critical action buttons.
+- **Typography**: Clean typographic pairing using **Poppins** for headings and **Inter** for long-form body text, imported via Google Fonts.
+- **Accessibility**: Meaningful visible `<h1>` tags on every page, logical `<h2>`/`<h3>` heading hierarchy, descriptive image `alt` attributes, and clean focus states.
+- **Micro-Interactions**: Subtle enter animations and accordions powered by Motion (`motion/react`) alongside custom CSS keyframes.
 
 ---
 
 ## 📱 Responsive Design
 
-Built **mobile-first**, since most visitors reaching the WhatsApp helpline or donation page arrive from a phone. Tailwind's responsive utilities (`sm:`, `md:`, `lg:`) shape layout across breakpoints, with the navbar collapsing into a slide-down mobile menu and the donation hero stacking its QR panel below the copy on smaller screens.
+Built mobile-first from the ground up:
+- Navigation automatically transitions to a slide-down mobile menu on smaller screens.
+- Image carousels swap between landscape and portrait assets via `<picture>` breakpoint queries.
+- Donation methods and contact information collapse into single-column cards on mobile devices for easy reading and one-tap interaction.
 
 ---
 
 ## 🛠️ Tech Stack
 
-**⚛️ Frontend**
-- React 19
-- Vite 6
-- Tailwind CSS 4 (`@tailwindcss/vite`)
-- Lightweight custom `pushState`/`popstate` client-side router (no routing library)
+### Frontend Core
+- **React 19** (`react`, `react-dom`)
+- **Vite 6** (`vite`, `@vitejs/plugin-react`)
+- **Tailwind CSS 4** (`@tailwindcss/vite`)
+- Custom `pushState` / `popstate` SPA router
 
-**🎞️ Animation**
-- **Framer Motion** / `motion`
-- Lenis (smooth scroll)
+### Animation & Interaction
+- **Motion 12** (`motion`)
+- **Lenis** (`lenis`) for smooth momentum scrolling
 
-**🧩 Icons**
-- `react-icons` (Feather, Font Awesome 6, Heroicons 2, Lucide)
+### Icons & Assets
+- **React Icons** (`react-icons`: Font Awesome 6, Feather, Material Design)
 
-**🧰 Version Control & Tooling**
-- Git
-- GitHub
-- ESLint 9 (flat config)
-- TypeScript type definitions for React (`@types/react`, `@types/react-dom`)
-- npm
+### SEO & Server Setup
+- Custom post-build prerender engine (`scripts/prerender.mjs`)
+- Schema.org JSON-LD structured data engine (`src/seo/seo.js`)
+- Apache HTTP Server configuration (`public/.htaccess`)
 
-**☁️ Hosting & Deployment**
-
-- Vercel (app hosting/deployment) — <a href="https://unite-for-nation.vercel.app/" target="_blank" rel="noopener noreferrer">unite-for-nation.vercel.app</a>
-
-- Custom domain — <a href="https://unitefornation.com/" target="_blank" rel="noopener noreferrer">unitefornation.com</a>
+### Tooling & Code Quality
+- **ESLint 9** with flat config (`eslint.config.js`)
+- **npm** package manager
 
 ---
 
 ## 📂 Project Structure
 
-
-```
-unite-for-nation/
-├── index.html                    ⭐ App HTML entry + deep SEO meta tags
-├── package.json                  ⭐ Dependencies & scripts
-├── vite.config.js                ⭐ Vite build config
-└── src/
-    ├── App.jsx                   ⭐ Root component + custom pushState router
-    ├── main.jsx                  ⭐ React entry point
-    ├── index.css                 ⭐ Global styles, fonts, animations
-    ├── components/
-    │   ├── common/                # Button, Container, Icon, SectionTitle
-    │   ├── layout/                # Navbar, Footer, MainLayout (+ Lenis)
-    │   ├── sections/
-    │   │   ├── about/
-    │   │   ├── contact/
-    │   │   ├── donate/            ⭐ full donation-flow module (amount tiers, QR/UPI/bank, impact, verification...)
-    │   │   └── home/              # hero, mission, achievements, gallery, media coverage...
-    │   └── ui/                    # Accordion, Badge, Card, CopyButton, Modal
-    ├── data/                      ⭐ all site content — zero hardcoding
-    │   ├── site.js, seo.js, navigation.js
-    │   ├── certificates.js        ⭐ 12A / 80G / ISO / NGO Darpan details
-    │   ├── donationAmountData.js, donationMethodData.js
-    │   └── ...(about, gallery, testimonials, timeline, impact, etc.)
-    └── pages/                     ⭐ route-level page components
-        ├── Home.jsx
-        ├── About.jsx
-        ├── Donate.jsx             ⭐ donation page composition
-        ├── Gallery.jsx
-        ├── Contact.jsx
-        └── NotFound.jsx
+```text
+Unite-for-Nation/
+├── public/
+│   ├── .htaccess             # Apache rewrite rules (clean URLs & prerender mapping)
+│   ├── favicons.webp         # Website favicon
+│   ├── og-image.png          # OpenGraph social share card (1200x630)
+│   ├── qr code.jpeg          # Donation QR code image
+│   ├── robots.txt            # Search engine crawler directives & sitemap link
+│   └── sitemap.xml           # XML sitemap with all indexable routes
+├── scripts/
+│   └── prerender.mjs         # Build-time static HTML head injection script
+├── src/
+│   ├── App.jsx               # Route resolver, skeleton manager & router listener
+│   ├── main.jsx              # React application entry point
+│   ├── index.css             # Tailwind CSS entry & global utility styling
+│   ├── assets/               # Brand logos, founder portraits, works & gallery images
+│   │   └── readme/           # Screenshots used in README documentation
+│   ├── components/
+│   │   ├── common/           # Button, Container, Icon, PageSkeleton, SectionTitle
+│   │   ├── layout/           # Navbar, Footer, MainLayout (Lenis & SEO listener)
+│   │   ├── sections/         # Page-specific components (home, about, contact, donate)
+│   │   └── ui/               # Accordion, Badge, Card, CopyButton, Modal
+│   ├── data/                 # Data modules (about, contact, gallery, hero, site, etc.)
+│   ├── pages/                # Route components (Home, About, Contact, Donate, Gallery, NotFound)
+│   └── seo/
+│       └── seo.js            # Central metadata, Schema.org builder & head sync helper
+├── index.html                # Base HTML template with font links and skeleton
+├── package.json              # Project scripts and dependency definitions
+├── vite.config.js            # Vite build configuration & dev server options
+└── eslint.config.js          # ESLint 9 configuration file
 ```
 
 ---
 
 ## 🚀 Performance & SEO
 
-**⚡ Performance**
-- Lenis-powered smooth scroll synced with Framer Motion's scroll-triggered animations
-- Lazy-loaded, async-decoded images across the gallery, certificates, and media coverage sections
-- A lightweight custom router avoids the overhead of a full routing library for a small page set
-- Reduced repaint cost through count-up animations driven by `requestAnimationFrame`
-
-**🔍 SEO**
-- Extensive `<title>`, meta description, and long-tail keyword targeting around human rights, legal aid, and false-accusation defense
-- Open Graph tags and a canonical URL pointing to `unitefornation.com`
-- Google Search Console site verification tag
-- `robots` set to `index, follow` for full search visibility
+- **Static HTML for Crawlers**: When running `npm run build`, `scripts/prerender.mjs` generates pre-populated HTML heads for every route in `dist/`. Search engine bots get complete metadata, titles, and schema without needing to execute JavaScript.
+- **Self-Referencing Canonicals**: Every indexable page carries its own explicit HTTPS canonical URL pointing to `https://unitefornation.com/`.
+- **404 Handling**: Unknown URLs trigger Apache's `ErrorDocument 404 /404.html`, ensuring a proper HTTP 404 status code while serving a branded page marked with `noindex, follow`.
+- **Zero Keyword Stuffing**: Meta tags are written for natural search intent, avoiding penalty-inducing keyword repetition.
+- **Resource Optimization**: Critical fonts preconnected to Google Fonts; hero banners use responsive image sources (`<picture>`); lazy-loading applied to below-the-fold media.
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation & Local Setup
 
-### 1️⃣ Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/abufazal460/Unite-for-Nation.git
 cd Unite-for-Nation
 ```
 
-### 2️⃣ Install dependencies
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 3️⃣ Run the development server
+### 3. Start development server
 
 ```bash
 npm run dev
 ```
 
+The app will be available locally at `http://localhost:3000`.
+
 ---
 
 ## 🔐 Environment Variables
 
-> No environment variables are needed to run the frontend locally — content lives directly in the codebase under `src/data/`, including donation details, certificates, and contact information.
+No environment variables are required to run this project. All content, configuration, and donation information are maintained directly in the codebase under `src/data/`.
 
 ---
 
 ## 📜 Available Scripts
 
-| Script | Description |
+| Command | Action |
 |---|---|
-| `npm run dev` | Start the Vite development server |
-| `npm run build` | Build the app for production |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run ESLint across the project |
+| `npm run dev` | Starts the Vite development server on `0.0.0.0:3000` |
+| `npm run build` | Compiles frontend assets with Vite and executes `prerender.mjs` |
+| `npm run preview` | Starts a local static preview server of the built `dist` folder |
+| `npm run lint` | Runs ESLint 9 across all project files |
 
 ---
 
 ## 🚢 Deployment
 
-The app is deployed on **Vercel** at [unite-for-nation.vercel.app](https://unite-for-nation.vercel.app/).
+The production build produces a fully static distribution in the `dist/` directory:
 
-The production domain, **[unitefornation.com](http://unitefornation.com/)**, is registered and points to the Vercel deployment.
+```bash
+npm run build
+```
+
+### Deployment Flow:
+1. `vite build` bundles JavaScript, CSS, and static assets into `dist/`.
+2. `node scripts/prerender.mjs` generates route-specific static HTML files (`index.html`, `about.html`, `gallery.html`, `contact.html`, `donate.html`, `404.html`) in `dist/`.
+3. The contents of `dist/` are uploaded to the production host (**Hostinger** / Apache server).
+4. `.htaccess` handles HTTPS redirection, clean URL routing, and serves pre-rendered HTML files directly.
+
+- **Production Domain**: [https://unitefornation.com/](https://unitefornation.com/)
+- **Vercel Mirror**: [https://unite-for-nation.vercel.app/](https://unite-for-nation.vercel.app/)
 
 ---
 
 ## 👤 Author
 
 **Abu Fazal**
-
-[![GitHub](https://img.shields.io/badge/GitHub-abufazal460-1E293B?style=flat-square&logo=github&logoColor=white)](https://github.com/abufazal460)
+- GitHub: [@abufazal460](https://github.com/abufazal460)
+- Portfolio: [abufazal.netlify.app](https://abufazal.netlify.app/)
 
 ---
 
 ## 📄 License
 
-No license file is currently included in this repository. All rights reserved unless a license is added.
+This project is private and proprietary to **Unite for Nation Human Rights Foundation**. All rights reserved.
